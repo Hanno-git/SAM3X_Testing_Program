@@ -36,6 +36,9 @@
 #define PWMH0_PB12_PIN	12
 #define PWMH0_PB12_PORT	PIOB //per B
 
+#define PWMFI1_PA3_PIN	5
+#define PWMFI1_PA3_PORT	PIOA //per B
+
 #define TWD0_SCL_PA18_PIN		18//same 3x & 3a
 #define TWD0_SCL_PA18_PORT		PIOA //per A
 #define TWD0_SDA_PA17_PIN		17

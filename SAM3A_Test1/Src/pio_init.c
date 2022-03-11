@@ -172,6 +172,7 @@ void PWM_PIO_init(void)
 	PIO_IO_init(Output,PWMH3_PB15_PORT,PWMH3_PB15_PIN,Peripheral_B);
 	PIO_IO_init(Output,PWML3_PA0_PORT,PWML3_PA0_PIN,Peripheral_B);
 	//PIO_IO_init(Output,PWMH0_PB12_PORT,PWMH0_PB12_PIN,Peripheral_B);
+	PIO_IO_init(Input,PWMFI1_PA3_PORT,PWMFI1_PA3_PIN,Peripheral_B);
 	
 }
 
