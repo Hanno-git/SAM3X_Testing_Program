@@ -9,8 +9,6 @@
 #ifndef MAIN_H_
 #define MAIN_H_
 
-#define USART_Clock 80000000UL
-
 #include <sam3x8e.h>
 #include "usart.h"
 #include "stddef.h"
@@ -18,6 +16,8 @@
 #include <component/pio.h>
 #include <component/spi.h>
 #include <component/adc.h>
+#include <component/dacc.h>
+#include <component/pwm.h>
 
 
 #endif /* MAIN_H_ */

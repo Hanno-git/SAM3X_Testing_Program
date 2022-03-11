@@ -1,5 +1,5 @@
-Src/DAC_init_SAM.d Src/DAC_init_SAM.o: ../Src/DAC_init_SAM.c \
- ../Inc/DAC_init_SAM.h ../Inc/main.h ../Drivers/Inc/sam3x8e.h \
+Drivers/Src/PWM_SAM.d Drivers/Src/PWM_SAM.o: ../Drivers/Src/PWM_SAM.c \
+ ../Drivers/Inc/PWM_SAM.h ../Inc/main.h ../Drivers/Inc/sam3x8e.h \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\lib\gcc\arm-none-eabi\6.3.1\include\stdint.h \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-none-eabi\include\stdint.h \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-none-eabi\include\machine\_default_types.h \
@@ -43,14 +43,14 @@ Src/DAC_init_SAM.d Src/DAC_init_SAM.o: ../Src/DAC_init_SAM.c \
  ../Drivers/Inc/instance/rstc.h ../Drivers/Inc/instance/supc.h \
  ../Drivers/Inc/instance/rtt.h ../Drivers/Inc/instance/wdt.h \
  ../Drivers/Inc/instance/rtc.h ../Drivers/Inc/instance/gpbr.h \
- ../Drivers/Inc/pio/sam3x8e.h ../Drivers/Inc/usart.h ../Inc/main.h \
+ ../Drivers/Inc/pio/sam3x8e.h ../Drivers/Inc/usart.h \
  ../Core/Inc/cmsis_compiler.h \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\lib\gcc\arm-none-eabi\6.3.1\include\stddef.h \
  ../Drivers/Inc/component/twi.h ../Drivers/Inc/component/pio.h \
  ../Drivers/Inc/component/spi.h ../Drivers/Inc/component/adc.h \
  ../Drivers/Inc/component/dacc.h ../Drivers/Inc/component/pwm.h
 
-../Inc/DAC_init_SAM.h:
+../Drivers/Inc/PWM_SAM.h:
 
 ../Inc/main.h:
 
@@ -217,8 +217,6 @@ c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-no
 ../Drivers/Inc/pio/sam3x8e.h:
 
 ../Drivers/Inc/usart.h:
-
-../Inc/main.h:
 
 ../Core/Inc/cmsis_compiler.h:
 

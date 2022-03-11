@@ -36,10 +36,9 @@ int main(void)
 	USART0_init();//works
 	DAC_init();//works
 	ADC_init();//works
+	PWM_init();//works  
 	/*
-	PWM_init();
 	SPI_init();
-	
 	RTC_init();*/
 	/* Define Time */
 	/*

@@ -49,6 +49,7 @@ Src/RTC_init_ISL12022M.d Src/RTC_init_ISL12022M.o: \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\lib\gcc\arm-none-eabi\6.3.1\include\stddef.h \
  ../Drivers/Inc/component/twi.h ../Drivers/Inc/component/pio.h \
  ../Drivers/Inc/component/spi.h ../Drivers/Inc/component/adc.h \
+ ../Drivers/Inc/component/dacc.h ../Drivers/Inc/component/pwm.h \
  ../Drivers/Inc/TWI_SAM.h ../Inc/pio_init.h
 
 ../Inc/RTC_init_ISL12022M.h:
@@ -232,6 +233,10 @@ c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\lib\gc
 ../Drivers/Inc/component/spi.h:
 
 ../Drivers/Inc/component/adc.h:
+
+../Drivers/Inc/component/dacc.h:
+
+../Drivers/Inc/component/pwm.h:
 
 ../Drivers/Inc/TWI_SAM.h:
 

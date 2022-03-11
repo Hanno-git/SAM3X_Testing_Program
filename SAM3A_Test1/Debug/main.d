@@ -48,6 +48,7 @@ main.d main.o: .././main.c ../Drivers/Inc/sam.h ../Drivers/Inc/sam3x8e.h \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\lib\gcc\arm-none-eabi\6.3.1\include\stddef.h \
  ../Drivers/Inc/component/twi.h ../Drivers/Inc/component/pio.h \
  ../Drivers/Inc/component/spi.h ../Drivers/Inc/component/adc.h \
+ ../Drivers/Inc/component/dacc.h ../Drivers/Inc/component/pwm.h \
  ../Drivers/Inc/PIO_SAM.h ../Inc/USART_init_SAM.h \
  ../Drivers/Inc/USART_SAM.h ../Inc/PWM_init_SAM.h ../Inc/TWI_init_SAM.h \
  ../Drivers/Inc/TWI_SAM.h ../Inc/SPI_init_SAM.h ../Drivers/Inc/SPI_SAM.h \
@@ -240,6 +241,10 @@ c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\lib\gc
 ../Drivers/Inc/component/spi.h:
 
 ../Drivers/Inc/component/adc.h:
+
+../Drivers/Inc/component/dacc.h:
+
+../Drivers/Inc/component/pwm.h:
 
 ../Drivers/Inc/PIO_SAM.h:
 

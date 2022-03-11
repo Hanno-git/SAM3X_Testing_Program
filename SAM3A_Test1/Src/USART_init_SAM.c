@@ -26,7 +26,7 @@ void USART0_init(void)//w
 	USART0->US_MR |=US_MR_PAR_NO;
 	//set baud rate
 	USART0->US_BRGR &=~(US_BRGR_CD_Msk);
-	USART0->US_BRGR |=0x2B;
+	USART0->US_BRGR |=0x2B;//115200
 	t1= USART0->US_BRGR ;
 	//enable transmit and receive
 	USART0->US_CR |=US_CR_RSTRX;//reset receive

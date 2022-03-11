@@ -47,7 +47,8 @@ Src/pio_init.d Src/pio_init.o: ../Src/pio_init.c ../Inc/pio_init.h \
  ../Core/Inc/cmsis_compiler.h \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\lib\gcc\arm-none-eabi\6.3.1\include\stddef.h \
  ../Drivers/Inc/component/twi.h ../Drivers/Inc/component/pio.h \
- ../Drivers/Inc/component/spi.h ../Drivers/Inc/component/adc.h
+ ../Drivers/Inc/component/spi.h ../Drivers/Inc/component/adc.h \
+ ../Drivers/Inc/component/dacc.h ../Drivers/Inc/component/pwm.h
 
 ../Inc/pio_init.h:
 
@@ -230,3 +231,7 @@ c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\lib\gc
 ../Drivers/Inc/component/spi.h:
 
 ../Drivers/Inc/component/adc.h:
+
+../Drivers/Inc/component/dacc.h:
+
+../Drivers/Inc/component/pwm.h:

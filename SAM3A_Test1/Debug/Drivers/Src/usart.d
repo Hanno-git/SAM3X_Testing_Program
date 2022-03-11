@@ -47,6 +47,7 @@ Drivers/Src/usart.d Drivers/Src/usart.o: ../Drivers/Src/usart.c \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\lib\gcc\arm-none-eabi\6.3.1\include\stddef.h \
  ../Drivers/Inc/component/twi.h ../Drivers/Inc/component/pio.h \
  ../Drivers/Inc/component/spi.h ../Drivers/Inc/component/adc.h \
+ ../Drivers/Inc/component/dacc.h ../Drivers/Inc/component/pwm.h \
  ../Core/Inc/cmsis_compiler.h
 
 ../Drivers/Inc/usart.h:
@@ -224,5 +225,9 @@ c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\lib\gc
 ../Drivers/Inc/component/spi.h:
 
 ../Drivers/Inc/component/adc.h:
+
+../Drivers/Inc/component/dacc.h:
+
+../Drivers/Inc/component/pwm.h:
 
 ../Core/Inc/cmsis_compiler.h:

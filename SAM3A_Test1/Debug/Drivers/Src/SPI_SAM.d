@@ -48,6 +48,7 @@ Drivers/Src/SPI_SAM.d Drivers/Src/SPI_SAM.o: ../Drivers/Src/SPI_SAM.c \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\lib\gcc\arm-none-eabi\6.3.1\include\stddef.h \
  ../Drivers/Inc/component/twi.h ../Drivers/Inc/component/pio.h \
  ../Drivers/Inc/component/spi.h ../Drivers/Inc/component/adc.h \
+ ../Drivers/Inc/component/dacc.h ../Drivers/Inc/component/pwm.h \
  ../Inc/pio_init.h ../Inc/main.h
 
 ../Drivers/Inc/SPI_SAM.h:
@@ -229,6 +230,10 @@ c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\lib\gc
 ../Drivers/Inc/component/spi.h:
 
 ../Drivers/Inc/component/adc.h:
+
+../Drivers/Inc/component/dacc.h:
+
+../Drivers/Inc/component/pwm.h:
 
 ../Inc/pio_init.h:
 

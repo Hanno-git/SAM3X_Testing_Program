@@ -52,6 +52,7 @@ C_SRCS +=  \
 ../Device_Startup/system_sam3xa.c \
 ../Drivers/Src/ADC_SAM.c \
 ../Drivers/Src/PIO_SAM.c \
+../Drivers/Src/PWM_SAM.c \
 ../Drivers/Src/RTC_ISL.c \
 ../Drivers/Src/SPI_SAM.c \
 ../Drivers/Src/TWI_SAM.c \
@@ -79,6 +80,7 @@ Device_Startup/startup_sam3xa.o \
 Device_Startup/system_sam3xa.o \
 Drivers/Src/ADC_SAM.o \
 Drivers/Src/PIO_SAM.o \
+Drivers/Src/PWM_SAM.o \
 Drivers/Src/RTC_ISL.o \
 Drivers/Src/SPI_SAM.o \
 Drivers/Src/TWI_SAM.o \
@@ -99,6 +101,7 @@ Device_Startup/startup_sam3xa.o \
 Device_Startup/system_sam3xa.o \
 Drivers/Src/ADC_SAM.o \
 Drivers/Src/PIO_SAM.o \
+Drivers/Src/PWM_SAM.o \
 Drivers/Src/RTC_ISL.o \
 Drivers/Src/SPI_SAM.o \
 Drivers/Src/TWI_SAM.o \
@@ -119,6 +122,7 @@ Device_Startup/startup_sam3xa.d \
 Device_Startup/system_sam3xa.d \
 Drivers/Src/ADC_SAM.d \
 Drivers/Src/PIO_SAM.d \
+Drivers/Src/PWM_SAM.d \
 Drivers/Src/RTC_ISL.d \
 Drivers/Src/SPI_SAM.d \
 Drivers/Src/TWI_SAM.d \
@@ -139,6 +143,7 @@ Device_Startup/startup_sam3xa.d \
 Device_Startup/system_sam3xa.d \
 Drivers/Src/ADC_SAM.d \
 Drivers/Src/PIO_SAM.d \
+Drivers/Src/PWM_SAM.d \
 Drivers/Src/RTC_ISL.d \
 Drivers/Src/SPI_SAM.d \
 Drivers/Src/TWI_SAM.d \
@@ -194,6 +199,13 @@ Drivers/Src/ADC_SAM.o: ../Drivers/Src/ADC_SAM.c
 	
 
 Drivers/Src/PIO_SAM.o: ../Drivers/Src/PIO_SAM.c
+	@echo Building file: $<
+	@echo Invoking: ARM/GNU C Compiler : 6.3.1
+	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\arm\arm-gnu-toolchain\bin\arm-none-eabi-gcc.exe$(QUOTE)  -x c -mthumb -D__SAM3X8E__ -DDEBUG -DDEBUG -DDEBUG  -I"../Inc" -I"../Drivers/Inc" -I"../Core/Inc" -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\arm\CMSIS\5.4.0\CMSIS\Core\Include" -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\SAM3X_DFP\1.0.50\include"  -Og -ffunction-sections -mlong-calls -g3 -Wall -mcpu=cortex-m3 -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
+	@echo Finished building: $<
+	
+
+Drivers/Src/PWM_SAM.o: ../Drivers/Src/PWM_SAM.c
 	@echo Building file: $<
 	@echo Invoking: ARM/GNU C Compiler : 6.3.1
 	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\arm\arm-gnu-toolchain\bin\arm-none-eabi-gcc.exe$(QUOTE)  -x c -mthumb -D__SAM3X8E__ -DDEBUG -DDEBUG -DDEBUG  -I"../Inc" -I"../Drivers/Inc" -I"../Core/Inc" -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\arm\CMSIS\5.4.0\CMSIS\Core\Include" -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\SAM3X_DFP\1.0.50\include"  -Og -ffunction-sections -mlong-calls -g3 -Wall -mcpu=cortex-m3 -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 

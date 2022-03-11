@@ -10,6 +10,8 @@ Drivers\Src\ADC_SAM.c
 
 Drivers\Src\PIO_SAM.c
 
+Drivers\Src\PWM_SAM.c
+
 Drivers\Src\RTC_ISL.c
 
 Drivers\Src\SPI_SAM.c
