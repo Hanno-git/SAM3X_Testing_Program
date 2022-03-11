@@ -8,24 +8,19 @@
 
 void SPI_transfer(void)
 {
-	static uint32_t temp;
+	volatile uint32_t temp;
+	
 	temp = (SPI0->SPI_SR>>1)&(0x0001);
-	if (temp)//tests data register is ready
+	if (temp==0)//tests data register is ready
 	{
-		while (1)
-		{
-			//Data has been written to SPI_TDR and not yet transferred to the serializer
-		}
+		temp = (SPI0->SPI_SR>>1)&(0x0001);//Data has been written to SPI_TDR and not yet transferred to the serializer		
 	}
 	//set data to be transferred
 	SPI0->SPI_TDR |= SPI_TDR_TD(0xA6);
 	temp = (SPI0->SPI_SR>>1)&(0x0001);
-	if (temp)//tests data register is ready
+	if (temp==0)//tests data register is ready
 	{
-		while (1)
-		{
-			//Data has been written to SPI_TDR and not yet transferred to the serializer
-		}
+			temp = (SPI0->SPI_SR>>1)&(0x0001);//Data has been written to SPI_TDR and not yet transferred to the serializer		
 	}
 	
 	

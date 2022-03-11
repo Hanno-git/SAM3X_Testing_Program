@@ -37,8 +37,8 @@ int main(void)
 	DAC_init();//works
 	ADC_init();//works
 	PWM_init();//works  
-	/*
 	SPI_init();
+	/*
 	RTC_init();*/
 	/* Define Time */
 	/*
@@ -56,8 +56,9 @@ int main(void)
 	// Continuously toggle LEDs
     while (1)
     {
-		DELAY(1000);
-		Toggle_Output(RED_PB26_PORT,RED_PB27_PIN);
+		//DELAY(1);
+		//Toggle_Output(RED_PB26_PORT,RED_PB27_PIN);
+		SPI_transfer();
 		//printString("HELLO World");
 		//a = ADC_READ();
 		//Get_Time(&time);

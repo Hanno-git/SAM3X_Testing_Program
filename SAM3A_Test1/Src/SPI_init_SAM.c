@@ -11,6 +11,8 @@ void SPI_init(void)
 {
 	//Enable Peripheral Clock
 	PMC->PMC_PCER0 |= (PMC_PCER0_PID24);//enable clock for SPI0
+	//Enable Peripheral SPI0
+	SPI0->SPI_CR |= SPI_CR_SPIEN;
 	//SCBR: Serial Clock Baud Rate
 	SPI0->SPI_CSR[1] &= ~(SPI_CSR_SCBR_Msk);
 	SPI0->SPI_CSR[1] |= SPI_CSR_SCBR(16);
