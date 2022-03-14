@@ -81,12 +81,13 @@ int main(void)
 
 	/* Initialize the peripherals */
 	PIO_INIT();//works
-	TWI_init();
+	TWI_init();//
 	USART0_init();//works
-	DAC_init();//works
+	DAC_init();//initiated Vref/2 output works 
 	ADC_init();//works
 	PWM_init();//works  
 	SPI_init();//works
+	
 	/*
 	RTC_init();*/
 	/* Define Time */
@@ -100,28 +101,47 @@ int main(void)
 	time.month_int= 3;
 	time.year= 2022;
 	time.Day_of_Week_int= 4;*/
+	
+	
 	//xTaskGenericCreate( pdTASK_CODE pxTaskCode, const signed char * const pcName, unsigned short usStackDepth, void *pvParameters, unsigned portBASE_TYPE uxPriority, xTaskHandle *pxCreatedTask, portSTACK_TYPE *puxStackBuffer, const xMemoryRegion * const xRegions ) PRIVILEGED_FUNCTION;
 	/* Create Worker 1 task */
 	xTaskCreate(Task1_task,NULL,configMINIMAL_STACK_SIZE+400,NULL, 1,& Task1_id);
 	xTaskCreate(Task2_task,NULL,configMINIMAL_STACK_SIZE+400,NULL, 2,& Task2_id);
+	
+	/*
+	Test FreeRTOS
+	*/
 	/*Start Scheduler*/
 	//vTaskStartScheduler();
-	// Continuously toggle LEDs
+	
+	
     while (1)
     {
 		a = 0;
-		while(a<=500)
+		while(a<=500)//small delay
 		{
 		a =a+1;
 		}
-		//Toggle_Output(RED_PB26_PORT,RED_PB27_PIN);
-		SPI_transfer();
-		//printString("HELLO World");
+		/*
+		Test SPI
+		*/
+		SPI_transfer("Hello World");
+		
+		/*
+		Test USART
+		*/
+		//printString("Hello World");
+		
+		/*
+		ADC Test
+		*/
 		//a = ADC_READ();
-		Get_Time(&time);
+		
+		/*
+		Test RTC I2C communication
+		*/
+		//Get_Time(&time);
 		//Set_Time(&time);
-		//DELAY(100);
-		//Toggle_Output(GREEN_PA15_PORT,GREEN_PA15_PIN);
 	}
 	    
 }

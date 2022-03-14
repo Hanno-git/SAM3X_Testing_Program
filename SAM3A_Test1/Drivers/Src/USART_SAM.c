@@ -11,11 +11,13 @@ void transmitByte(uint8_t data){
 	//wait for ready
 	t1 = (USART0->US_CSR>>1)&0x1;
 	while ((~t1)&0x1){
-		t1 = (USART0->US_CSR>>1)&0x1;}//#SR
+		t1 = (USART0->US_CSR>>1)&0x1;}//#SR	
 	t1 = (USART0->US_CSR>>9)&0x1;
 	while (!( UART_SR_TXEMPTY)){
 	t1 = (USART0->US_CSR>>9)&0x1;
 	};
+	
+	//load data to be transmitted
 	USART0->US_THR |= data;
 }
 

@@ -12,7 +12,7 @@
 #include "main.h"
 #include "pio_init.h"
 
-void SPI_transfer(void);
+void SPI_transfer(const char myString[]);
 
 
 
