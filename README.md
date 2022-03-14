@@ -6,7 +6,7 @@ This is a simple peripheral test program for the ATSAM3X8E-CU chip.
 These peripherals were tested using the Arduino Duo board
 
 Tested features:
-USART0,DAC,ADC,PIO (Input and Output mode),PWM
+USART0,DAC,ADC,PIO (Input and Output mode),PWM, multithreading with FREERTOS
 
 Untested features:
 TWI,SPI
