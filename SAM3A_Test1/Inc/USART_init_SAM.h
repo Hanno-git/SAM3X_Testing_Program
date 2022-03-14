@@ -11,14 +11,6 @@
 
 #include "main.h"
 
-#define USART0_SERIAL                 USART0
-#define USART0_SERIAL_ID              ID_USART0  
-#define USART0_SERIAL_ISR_HANDLER     USART0_Handler
-#define USART0_SERIAL_BAUDRATE        115200
-#define USART0_SERIAL_CHAR_LENGTH     US_MR_CHRL_8_BIT
-#define USART0_SERIAL_PARITY          US_MR_PAR_NO
-#define USART0_SERIAL_STOP_BIT        US_MR_NBSTOP_1_BIT
-
 
 void USART0_init(void);
 

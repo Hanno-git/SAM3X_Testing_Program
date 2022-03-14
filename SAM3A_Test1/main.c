@@ -130,7 +130,8 @@ int main(void)
 		/*
 		Test USART
 		*/
-		//printString("Hello World");
+		DELAY(10);
+		USART_Transfer("Hello World");
 		
 		/*
 		ADC Test

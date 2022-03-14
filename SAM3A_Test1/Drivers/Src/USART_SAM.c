@@ -21,7 +21,7 @@ void transmitByte(uint8_t data){
 	USART0->US_THR |= data;
 }
 
-void printString(const char myString[]) {//w
+void USART_Transfer(const char myString[]) {//w
 	uint8_t i = 0;
 	while (myString[i]) {
 		transmitByte(myString[i]);

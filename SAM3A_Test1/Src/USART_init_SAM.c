@@ -9,7 +9,7 @@
 
 void USART0_init(void)//w
 {
-	volatile uint32_t t1;
+	volatile uint32_t t;
 	//clear write protect
 	USART0->US_WPMR =US_WPMR_WPKEY_PASSWD|~(PMC_WPMR_WPEN);
 	//select MCK as clock
@@ -27,7 +27,6 @@ void USART0_init(void)//w
 	//set baud rate
 	USART0->US_BRGR &=~(US_BRGR_CD_Msk);
 	USART0->US_BRGR |=0x2B;//115200
-	t1= USART0->US_BRGR ;
 	//enable transmit and receive
 	USART0->US_CR |=US_CR_RSTRX;//reset receive
 	USART0->US_CR &=~US_CR_RSTRX;

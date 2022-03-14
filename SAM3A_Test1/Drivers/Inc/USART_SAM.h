@@ -13,6 +13,6 @@
 #include "main.h"
 #include "pio_init.h"
 
-void printString(const char myString[]);
+void USART_Transfer(const char myString[]);
 
 #endif /* USART_SAM_H_ */
