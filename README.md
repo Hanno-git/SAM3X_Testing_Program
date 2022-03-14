@@ -8,8 +8,10 @@ These peripherals were tested using the Arduino Duo board
 Tested features:
 USART0,DAC,ADC,PIO (Input and Output mode),PWM, multithreading with FREERTOS
 
+Semi tested feature:
+TWI (See test results folder for more info)
 Untested features:
-TWI,SPI
+SPI
 
 The goal of this is just to test each peripheral and confirm that a correct initializing and utilization process was followed
 
