@@ -81,7 +81,7 @@ int main(void)
 
 	/* Initialize the peripherals */
 	PIO_INIT();//works
-	//TWI_init();
+	TWI_init();
 	USART0_init();//works
 	DAC_init();//works
 	ADC_init();//works
@@ -105,7 +105,7 @@ int main(void)
 	xTaskCreate(Task1_task,NULL,configMINIMAL_STACK_SIZE+400,NULL, 1,& Task1_id);
 	xTaskCreate(Task2_task,NULL,configMINIMAL_STACK_SIZE+400,NULL, 2,& Task2_id);
 	/*Start Scheduler*/
-	vTaskStartScheduler();
+	//vTaskStartScheduler();
 	// Continuously toggle LEDs
     while (1)
     {
@@ -118,7 +118,7 @@ int main(void)
 		SPI_transfer();
 		//printString("HELLO World");
 		//a = ADC_READ();
-		//Get_Time(&time);
+		Get_Time(&time);
 		//Set_Time(&time);
 		//DELAY(100);
 		//Toggle_Output(GREEN_PA15_PORT,GREEN_PA15_PIN);

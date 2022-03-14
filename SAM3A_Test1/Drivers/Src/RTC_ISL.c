@@ -148,14 +148,16 @@ struct time_RTC{
 void Get_Time(struct time_RTC *time)
 {
 	uint8_t SC = 0,MN= 0,HR= 0,DT= 0,MO= 0,YR= 0,DW= 0,t;
+	uint8_t Read_lst[7];
 	//read data from RTC
-	SC = I2C_READ_RTC(0x00);
-	MN = I2C_READ_RTC(0x01);
-	HR = I2C_READ_RTC(0x02);
-	DT = I2C_READ_RTC(0x03);
-	MO = I2C_READ_RTC(0x04);
-	YR = I2C_READ_RTC(0x05);
-	DW = I2C_READ_RTC(0x06);
+	I2C_READ_RTC_multiple(TWI0,0x0,Read_lst,7);
+	SC = Read_lst[0];
+	MN = Read_lst[1];
+	HR = Read_lst[2];
+	DT = Read_lst[3];
+	MO = Read_lst[4];
+	YR = Read_lst[5];
+	DW = Read_lst[6];
 	//
 	time->sec = SC;//grabs sec
 	time->min = MN;//grabs min
@@ -211,11 +213,6 @@ void Set_Time(struct time_RTC *time)
 	MO= time->month_int;//sets month
 	YR = time->year;//sets year
 	DW = time->Day_of_Week_int;//sets day of week
-	I2C_WRITE_RTC(0x00,SC);
-	I2C_WRITE_RTC(0x01,MN);
-	I2C_WRITE_RTC(0x02,HR);
-	I2C_WRITE_RTC(0x03,DT);
-	I2C_WRITE_RTC(0x04,MO);
-	I2C_WRITE_RTC(0x05,YR);
-	I2C_WRITE_RTC(0x06,DW);
+	uint8_t w_len[] = {SC,MN,HR,DT,MO,YR,DW};
+	I2C_WRITE_RTC_multiple(TWI0,0x0,w_len,7);
 }

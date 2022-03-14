@@ -13,7 +13,7 @@
 
 void TWI_init(void);
 void I2C_transfer(void);
-
+void TWI_init_RTC(void);
 
 
 #endif /* TWI_INIT_SAM_H_ */

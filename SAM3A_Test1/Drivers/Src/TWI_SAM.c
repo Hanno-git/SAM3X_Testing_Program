@@ -7,67 +7,155 @@
 
 #include "TWI_SAM.h"
 
-void I2C_WRITE_RTC(uint8_t Add_Byte, uint8_t w_Byte)
+void I2C_WRITE_RTC_single(Twi *I2C, uint32_t Add_Byte, uint8_t w_Byte)
 {
 	static uint32_t status_transmit;
-	//Set device address
-	TWI0->TWI_MMR |= TWI_MMR_DADR(0b11011111);
+	
 	//sets Module to write mode
-	TWI0->TWI_MMR &= ~(TWI_MMR_MREAD);
-	//sets Internal Device Address Size to 1 Byte
-	TWI0->TWI_MMR &= ~(TWI_MMR_IADRSZ_Msk);
-	TWI0->TWI_MMR |= (TWI_MMR_IADRSZ_1_BYTE);
+	I2C->TWI_MMR &= ~(TWI_MMR_MREAD);
 	//sets address to write to
-	TWI0 ->TWI_IADR = 0x000F&Add_Byte;
+	I2C ->TWI_IADR = Add_Byte;
 	//loads data to be transmitted
-	TWI0 ->TWI_THR = w_Byte;
+	I2C ->TWI_THR = w_Byte;
 	//wait for transmission to finish
-	status_transmit = (TWI0->TWI_IMR>>2)&(0x0001);
-	while ((~status_transmit)&0X1)
+	status_transmit = (I2C->TWI_IMR>>2)&(0x0001);
+	while (status_transmit==0)
 	{
-		status_transmit = (TWI0->TWI_IMR>>2)&(0x0001);
+		status_transmit = (I2C->TWI_IMR>>2)&(0x0001);
 	}
 	// sends stop condition
-	TWI0->TWI_CR |= TWI_CR_STOP;
+	I2C->TWI_CR |= TWI_CR_STOP;
+	//wait for transmission to finish
+	status_transmit = (I2C->TWI_IMR>>2)&(0x0001);
+	while (status_transmit==0)
+	{
+		status_transmit = (I2C->TWI_IMR>>2)&(0x0001);
+	}
+	
 	//wait for entire transmission completion
 	status_transmit = (TWI0->TWI_IMR>>0)&(0x0001);
-	while ((~status_transmit)&0X1)
+	while (status_transmit==0)
 	{
-		status_transmit = (TWI0->TWI_IMR>>2)&(0x0001);
+		status_transmit = (I2C->TWI_IMR>>2)&(0x0001);
 	}
 	return;
 	
 }
 
-uint8_t I2C_READ_RTC(uint8_t Add_Byte)
+void I2C_WRITE_RTC_multiple(Twi *I2C, uint32_t Add_Byte, uint8_t *w_Byte, uint32_t w_len)
+{
+	static uint32_t status_transmit,count=0;
+	
+	//sets Module to write mode
+	I2C->TWI_MMR &= ~(TWI_MMR_MREAD);
+	//sets address to write to
+	I2C ->TWI_IADR = Add_Byte;
+	
+	while (count<w_len)//transmits multiple bytes of data
+	{
+		//loads data to be transmitted
+		I2C ->TWI_THR = (w_Byte+count);
+		
+		//wait for transmission to finish
+		status_transmit = (I2C->TWI_IMR>>2)&(0x0001);
+		while (status_transmit==0)
+		{
+			status_transmit = (I2C->TWI_IMR>>2)&(0x0001);
+		}
+		
+		count = count+1;//increment counter
+	}
+
+	// sends stop condition
+	I2C->TWI_CR |= TWI_CR_STOP;
+	//wait for transmission to finish
+	status_transmit = (I2C->TWI_IMR>>2)&(0x0001);
+	while (status_transmit==0)
+	{
+		status_transmit = (I2C->TWI_IMR>>2)&(0x0001);
+	}
+	
+	//wait for entire transmission completion
+	status_transmit = (TWI0->TWI_IMR>>0)&(0x0001);
+	while (status_transmit==0)
+	{
+		status_transmit = (I2C->TWI_IMR>>2)&(0x0001);
+	}
+	return;
+	
+}
+
+uint8_t I2C_READ_RTC_single(Twi *I2C, uint32_t Add_Byte)
 {
 	static uint8_t read;
 	static uint32_t status_read;
-	//Set device address
-	TWI0->TWI_MMR |= TWI_MMR_DADR(0b11011110);
+	//sets address to write to
+	I2C ->TWI_IADR = Add_Byte;
 	//sets Module to read mode
-	TWI0->TWI_MMR |= (TWI_MMR_MREAD);
-	//sets Internal Device Address Size to 1 Byte
-	TWI0->TWI_MMR &= ~(TWI_MMR_IADRSZ_Msk);
-	TWI0->TWI_MMR |= (TWI_MMR_IADRSZ_1_BYTE);
-	//sets address to read
-	TWI0 ->TWI_IADR = 0x000F&Add_Byte;
+	I2C->TWI_MMR |= (TWI_MMR_MREAD);
+	
 	//Start the transfer
-	TWI0->TWI_CR = TWI_CR_START;
+	I2C->TWI_CR = TWI_CR_START;
 	//wait for transmission to finish
-	status_read = (TWI0->TWI_IMR>>1)&(0x0001);
-	while (~status_read)
+	status_read = (I2C->TWI_IMR>>1)&(0x0001);
+	while (status_read==0)
 	{
-		status_read = (TWI0->TWI_IMR>>1)&(0x0001);
+		status_read = (I2C->TWI_IMR>>1)&(0x0001);
 	}
 	//grabs received data byte
-	read =TWI0 ->TWI_RHR;
+	read =I2C ->TWI_RHR;
 	
 	//wait for entire transmission completion
-	status_read = (TWI0->TWI_IMR>>0)&(0x0001);
-	while (~status_read)
+	status_read = (I2C->TWI_IMR>>0)&(0x0001);
+	while (status_read==0)
 	{
-		status_read = (TWI0->TWI_IMR>>0)&(0x0001);
+		status_read = (I2C->TWI_IMR>>0)&(0x0001);
 	}
 	return read;
+}
+
+void I2C_READ_RTC_multiple(Twi *I2C, uint32_t Add_Byte, uint8_t *read_lst, uint8_t read_len)
+{
+	static uint32_t count=0;
+	static uint32_t status_read;
+	//sets address to write to
+	I2C ->TWI_IADR = Add_Byte;
+	//sets Module to read mode
+	I2C->TWI_MMR |= (TWI_MMR_MREAD);
+	
+	//Start the transfer
+	I2C->TWI_CR = TWI_CR_START;
+	while (count<read_len -1)//read multiple bytes
+	{
+		//wait for transmission to finish
+		status_read = (I2C->TWI_IMR>>1)&(0x0001);
+		while (status_read==0)
+		{
+			status_read = (I2C->TWI_IMR>>1)&(0x0001);
+		}
+		//grabs received data byte
+		*(read_lst+count) =I2C ->TWI_RHR;
+		
+		count=count+1;//increment counter
+	}
+	
+	I2C->TWI_CR = TWI_CR_STOP;//stop transfer when only one byte to read remaining
+	
+	
+	//wait for transmission to finish
+	status_read = (I2C->TWI_IMR>>1)&(0x0001);
+	while (status_read==0)
+	{
+		status_read = (I2C->TWI_IMR>>1)&(0x0001);
+	}
+	*(read_lst+read_len-1) =I2C ->TWI_RHR; //read last byte
+	
+	
+	//wait for entire transmission completion
+	status_read = (I2C->TWI_IMR>>0)&(0x0001);
+	while (status_read==0)
+	{
+		status_read = (I2C->TWI_IMR>>0)&(0x0001);
+	}
+	return;
 }
