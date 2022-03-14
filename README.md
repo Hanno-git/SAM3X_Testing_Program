@@ -9,7 +9,8 @@ Tested features:
 USART0,DAC,ADC,PIO (Input and Output mode),PWM, multithreading with FREERTOS
 
 Semi tested feature:
-TWI (See test results folder for more info)
+TWI (See Test_Results folder for more info)
+
 Untested features:
 SPI
 
