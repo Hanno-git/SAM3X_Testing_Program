@@ -37,7 +37,7 @@ extern "C" {
 /**INDENT-ON**/
 /* @endcond */
 
-/* Clock settings (84MHz) */
+/* Clock settings (80MHz) */
 #define SYS_BOARD_OSCOUNT   (CKGR_MOR_MOSCXTST(0x8))
 #define SYS_BOARD_PLLAR     (CKGR_PLLAR_ONE | CKGR_PLLAR_MULA(0x27UL) | CKGR_PLLAR_PLLACOUNT(0x3fUL) | CKGR_PLLAR_DIVA(0x3UL))
 #define SYS_BOARD_MCKR      (PMC_MCKR_PRES_CLK_2 | PMC_MCKR_CSS_PLLA_CLK)

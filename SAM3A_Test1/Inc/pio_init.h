@@ -17,11 +17,15 @@
 #define Input		 1
 #define Output		 0 
 
-#define RED_PB26_PORT	PIOB//adjusted for 3x
-#define RED_PB27_PIN	27//
-
-#define GREEN_PA15_PORT	PIOA//defined as input for testing
+#define RED_PB26_PORT	PIOB
+#define RED_PB26_PIN	26
+#define GREEN_PA15_PORT	PIOA
 #define GREEN_PA15_PIN	15
+
+#define OUT_A0_PA16_PORT	PIOA
+#define OUT_A0_PA16_PIN		16
+#define OUT_A1_PA24_PORT	PIOA
+#define OUT_A1_PA24_PIN		24
 
 #define RDX0_PA10_PORT	PIOA
 #define RDX0_PA10_PIN	10

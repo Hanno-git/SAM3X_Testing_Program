@@ -19,7 +19,56 @@
 #include "DAC_init_SAM.h"
 #include "RTC_init_ISL12022M.h"
 #include "RTC_ISL.h"
+#include "asf.h"
+
+xTaskHandle Task1_id;
+xTaskHandle Task2_id;
 void DELAY(uint32_t delay);
+void vApplicationMallocFailedHook( void );
+
+static void Task1_task(void *pvParameters)
+{
+	portTickType xLastWakeTime;
+	const portTickType xFrequency = 100;
+
+	// Initialise the xLastWakeTime variable with the current time.
+	xLastWakeTime = xTaskGetTickCount();
+	for(;;)
+	{
+		/* task application*/
+	
+		//DELAY(100);
+		vTaskDelayUntil( &xLastWakeTime, xFrequency );
+		Toggle_Output(OUT_A1_PA24_PORT,OUT_A1_PA24_PIN);
+		
+	}
+	/* Should never go there */
+	vTaskDelete(NULL);
+}
+
+static void Task2_task(void *pvParameters)
+{
+	portTickType xLastWakeTime;
+	const portTickType xFrequency = 150;
+
+	// Initialise the xLastWakeTime variable with the current time.
+	xLastWakeTime = xTaskGetTickCount();
+	for(;;)
+	{
+		/* task application*/
+		
+		//DELAY(150);
+		vTaskDelayUntil( &xLastWakeTime, xFrequency );
+		Toggle_Output(OUT_A0_PA16_PORT,OUT_A0_PA16_PIN);
+		
+		
+		
+	}
+	/* Should never go there */
+	vTaskDelete(NULL);
+}
+
+
 
 int main(void)
 {
@@ -51,8 +100,12 @@ int main(void)
 	time.month_int= 3;
 	time.year= 2022;
 	time.Day_of_Week_int= 4;*/
-	
-	
+	//xTaskGenericCreate( pdTASK_CODE pxTaskCode, const signed char * const pcName, unsigned short usStackDepth, void *pvParameters, unsigned portBASE_TYPE uxPriority, xTaskHandle *pxCreatedTask, portSTACK_TYPE *puxStackBuffer, const xMemoryRegion * const xRegions ) PRIVILEGED_FUNCTION;
+	/* Create Worker 1 task */
+	xTaskCreate(Task1_task,NULL,configMINIMAL_STACK_SIZE+400,NULL, 1,& Task1_id);
+	xTaskCreate(Task2_task,NULL,configMINIMAL_STACK_SIZE+400,NULL, 2,& Task2_id);
+	/*Start Scheduler*/
+	vTaskStartScheduler();
 	// Continuously toggle LEDs
     while (1)
     {
@@ -84,5 +137,13 @@ void DELAY(uint32_t delay) //delay in ms
 	while(cnt<=delay)
 	{
 		cnt =cnt+1;
+	}
+}
+
+void vApplicationMallocFailedHook( void )
+{
+	while(1)
+	{
+		
 	}
 }

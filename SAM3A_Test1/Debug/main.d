@@ -54,7 +54,27 @@ main.d main.o: .././main.c ../Drivers/Inc/sam.h ../Drivers/Inc/sam3x8e.h \
  ../Drivers/Inc/TWI_SAM.h ../Inc/SPI_init_SAM.h ../Drivers/Inc/SPI_SAM.h \
  ../Inc/ADC_init_SAM.h ../Drivers/Inc/ADC_SAM.h ../Inc/DAC_init_SAM.h \
  ../Inc/RTC_init_ISL12022M.h ../Drivers/Inc/RTC_ISL.h \
- ../Drivers/Inc/TWI_SAM.h
+ ../Drivers/Inc/TWI_SAM.h ../Inc/asf.h \
+ ../Drivers/ASF/thirdparty/freertos/freertos-7.3.0/source/include/FreeRTOS.h \
+ ../Drivers/ASF/thirdparty/freertos/freertos-7.3.0/source/include/projdefs.h \
+ ../Drivers/Config/FreeRTOSConfig.h ../Drivers/Inc/system_sam3xa.h \
+ ../Drivers/ASF/thirdparty/freertos/freertos-7.3.0/source/include/portable.h \
+ ../Drivers/ASF/thirdparty/freertos/freertos-7.3.0/source/portable/gcc/sam/portmacro.h \
+ ../Drivers/ASF/thirdparty/freertos/freertos-7.3.0/source/include/mpu_wrappers.h \
+ ../Drivers/ASF/thirdparty/freertos/freertos-7.3.0/source/include/FreeRTOS_CLI.h \
+ ../Drivers/ASF/thirdparty/freertos/freertos-7.3.0/source/include/StackMacros.h \
+ ../Drivers/ASF/thirdparty/freertos/freertos-7.3.0/source/include/croutine.h \
+ ../Drivers/ASF/thirdparty/freertos/freertos-7.3.0/source/include/list.h \
+ ../Drivers/ASF/thirdparty/freertos/freertos-7.3.0/source/include/list.h \
+ ../Drivers/ASF/thirdparty/freertos/freertos-7.3.0/source/include/mpu_wrappers.h \
+ ../Drivers/ASF/thirdparty/freertos/freertos-7.3.0/source/include/portable.h \
+ ../Drivers/ASF/thirdparty/freertos/freertos-7.3.0/source/include/projdefs.h \
+ ../Drivers/ASF/thirdparty/freertos/freertos-7.3.0/source/include/queue.h \
+ ../Drivers/ASF/thirdparty/freertos/freertos-7.3.0/source/include/semphr.h \
+ ../Drivers/ASF/thirdparty/freertos/freertos-7.3.0/source/include/queue.h \
+ ../Drivers/ASF/thirdparty/freertos/freertos-7.3.0/source/include/task.h \
+ ../Drivers/ASF/thirdparty/freertos/freertos-7.3.0/source/include/timers.h \
+ ../Drivers/ASF/thirdparty/freertos/freertos-7.3.0/source/include/task.h
 
 ../Drivers/Inc/sam.h:
 
@@ -273,3 +293,47 @@ c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\lib\gc
 ../Drivers/Inc/RTC_ISL.h:
 
 ../Drivers/Inc/TWI_SAM.h:
+
+../Inc/asf.h:
+
+../Drivers/ASF/thirdparty/freertos/freertos-7.3.0/source/include/FreeRTOS.h:
+
+../Drivers/ASF/thirdparty/freertos/freertos-7.3.0/source/include/projdefs.h:
+
+../Drivers/Config/FreeRTOSConfig.h:
+
+../Drivers/Inc/system_sam3xa.h:
+
+../Drivers/ASF/thirdparty/freertos/freertos-7.3.0/source/include/portable.h:
+
+../Drivers/ASF/thirdparty/freertos/freertos-7.3.0/source/portable/gcc/sam/portmacro.h:
+
+../Drivers/ASF/thirdparty/freertos/freertos-7.3.0/source/include/mpu_wrappers.h:
+
+../Drivers/ASF/thirdparty/freertos/freertos-7.3.0/source/include/FreeRTOS_CLI.h:
+
+../Drivers/ASF/thirdparty/freertos/freertos-7.3.0/source/include/StackMacros.h:
+
+../Drivers/ASF/thirdparty/freertos/freertos-7.3.0/source/include/croutine.h:
+
+../Drivers/ASF/thirdparty/freertos/freertos-7.3.0/source/include/list.h:
+
+../Drivers/ASF/thirdparty/freertos/freertos-7.3.0/source/include/list.h:
+
+../Drivers/ASF/thirdparty/freertos/freertos-7.3.0/source/include/mpu_wrappers.h:
+
+../Drivers/ASF/thirdparty/freertos/freertos-7.3.0/source/include/portable.h:
+
+../Drivers/ASF/thirdparty/freertos/freertos-7.3.0/source/include/projdefs.h:
+
+../Drivers/ASF/thirdparty/freertos/freertos-7.3.0/source/include/queue.h:
+
+../Drivers/ASF/thirdparty/freertos/freertos-7.3.0/source/include/semphr.h:
+
+../Drivers/ASF/thirdparty/freertos/freertos-7.3.0/source/include/queue.h:
+
+../Drivers/ASF/thirdparty/freertos/freertos-7.3.0/source/include/task.h:
+
+../Drivers/ASF/thirdparty/freertos/freertos-7.3.0/source/include/timers.h:
+
+../Drivers/ASF/thirdparty/freertos/freertos-7.3.0/source/include/task.h:

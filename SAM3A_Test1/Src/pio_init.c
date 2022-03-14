@@ -131,8 +131,10 @@ void LED_PIO_init(void)
 	PMC->PMC_PCER0 |= (PMC_PCER0_PID11);//enable clock for port A
 	PMC->PMC_PCER0 |= (PMC_PCER0_PID12);//enable clock for port B
 	
-	PIO_IO_init(Output,RED_PB26_PORT,RED_PB27_PIN,PIO_control);
-	PIO_IO_init(Input,GREEN_PA15_PORT,GREEN_PA15_PIN,PIO_control);
+	PIO_IO_init(Output,RED_PB26_PORT,RED_PB26_PIN,PIO_control);
+	PIO_IO_init(Output,GREEN_PA15_PORT,GREEN_PA15_PIN,PIO_control);
+	PIO_IO_init(Output,OUT_A0_PA16_PORT,OUT_A0_PA16_PIN,PIO_control);
+	PIO_IO_init(Output,OUT_A1_PA24_PORT,OUT_A1_PA24_PIN,PIO_control);
 	
 }
 

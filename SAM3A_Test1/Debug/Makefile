@@ -35,6 +35,17 @@ LINKER_SCRIPT_DEP:=
 SUBDIRS :=  \
 ../Core/Inc \
 ../Device_Startup/ \
+../Drivers/ASF/ \
+../Drivers/ASF/thirdparty/ \
+../Drivers/ASF/thirdparty/freertos/ \
+../Drivers/ASF/thirdparty/freertos/freertos-7.3.0/ \
+../Drivers/ASF/thirdparty/freertos/freertos-7.3.0/source/ \
+../Drivers/ASF/thirdparty/freertos/freertos-7.3.0/source/include/ \
+../Drivers/ASF/thirdparty/freertos/freertos-7.3.0/source/portable/ \
+../Drivers/ASF/thirdparty/freertos/freertos-7.3.0/source/portable/gcc/ \
+../Drivers/ASF/thirdparty/freertos/freertos-7.3.0/source/portable/gcc/sam/ \
+../Drivers/ASF/thirdparty/freertos/freertos-7.3.0/source/portable/memmang/ \
+../Drivers/Config/ \
 ../Drivers/Inc \
 ../Drivers/Inc/component \
 ../Drivers/Inc/instance \
@@ -50,6 +61,13 @@ SUBDIRS :=  \
 C_SRCS +=  \
 ../Device_Startup/startup_sam3xa.c \
 ../Device_Startup/system_sam3xa.c \
+../Drivers/ASF/thirdparty/freertos/freertos-7.3.0/source/FreeRTOS_CLI.c \
+../Drivers/ASF/thirdparty/freertos/freertos-7.3.0/source/list.c \
+../Drivers/ASF/thirdparty/freertos/freertos-7.3.0/source/portable/gcc/sam/port.c \
+../Drivers/ASF/thirdparty/freertos/freertos-7.3.0/source/portable/memmang/heap_4.c \
+../Drivers/ASF/thirdparty/freertos/freertos-7.3.0/source/queue.c \
+../Drivers/ASF/thirdparty/freertos/freertos-7.3.0/source/tasks.c \
+../Drivers/ASF/thirdparty/freertos/freertos-7.3.0/source/timers.c \
 ../Drivers/Src/ADC_SAM.c \
 ../Drivers/Src/PIO_SAM.c \
 ../Drivers/Src/PWM_SAM.c \
@@ -78,6 +96,13 @@ ASM_SRCS +=
 OBJS +=  \
 Device_Startup/startup_sam3xa.o \
 Device_Startup/system_sam3xa.o \
+Drivers/ASF/thirdparty/freertos/freertos-7.3.0/source/FreeRTOS_CLI.o \
+Drivers/ASF/thirdparty/freertos/freertos-7.3.0/source/list.o \
+Drivers/ASF/thirdparty/freertos/freertos-7.3.0/source/portable/gcc/sam/port.o \
+Drivers/ASF/thirdparty/freertos/freertos-7.3.0/source/portable/memmang/heap_4.o \
+Drivers/ASF/thirdparty/freertos/freertos-7.3.0/source/queue.o \
+Drivers/ASF/thirdparty/freertos/freertos-7.3.0/source/tasks.o \
+Drivers/ASF/thirdparty/freertos/freertos-7.3.0/source/timers.o \
 Drivers/Src/ADC_SAM.o \
 Drivers/Src/PIO_SAM.o \
 Drivers/Src/PWM_SAM.o \
@@ -99,6 +124,13 @@ Src/USART_init_SAM.o
 OBJS_AS_ARGS +=  \
 Device_Startup/startup_sam3xa.o \
 Device_Startup/system_sam3xa.o \
+Drivers/ASF/thirdparty/freertos/freertos-7.3.0/source/FreeRTOS_CLI.o \
+Drivers/ASF/thirdparty/freertos/freertos-7.3.0/source/list.o \
+Drivers/ASF/thirdparty/freertos/freertos-7.3.0/source/portable/gcc/sam/port.o \
+Drivers/ASF/thirdparty/freertos/freertos-7.3.0/source/portable/memmang/heap_4.o \
+Drivers/ASF/thirdparty/freertos/freertos-7.3.0/source/queue.o \
+Drivers/ASF/thirdparty/freertos/freertos-7.3.0/source/tasks.o \
+Drivers/ASF/thirdparty/freertos/freertos-7.3.0/source/timers.o \
 Drivers/Src/ADC_SAM.o \
 Drivers/Src/PIO_SAM.o \
 Drivers/Src/PWM_SAM.o \
@@ -120,6 +152,13 @@ Src/USART_init_SAM.o
 C_DEPS +=  \
 Device_Startup/startup_sam3xa.d \
 Device_Startup/system_sam3xa.d \
+Drivers/ASF/thirdparty/freertos/freertos-7.3.0/source/FreeRTOS_CLI.d \
+Drivers/ASF/thirdparty/freertos/freertos-7.3.0/source/list.d \
+Drivers/ASF/thirdparty/freertos/freertos-7.3.0/source/portable/gcc/sam/port.d \
+Drivers/ASF/thirdparty/freertos/freertos-7.3.0/source/portable/memmang/heap_4.d \
+Drivers/ASF/thirdparty/freertos/freertos-7.3.0/source/queue.d \
+Drivers/ASF/thirdparty/freertos/freertos-7.3.0/source/tasks.d \
+Drivers/ASF/thirdparty/freertos/freertos-7.3.0/source/timers.d \
 Drivers/Src/ADC_SAM.d \
 Drivers/Src/PIO_SAM.d \
 Drivers/Src/PWM_SAM.d \
@@ -141,6 +180,13 @@ Src/USART_init_SAM.d
 C_DEPS_AS_ARGS +=  \
 Device_Startup/startup_sam3xa.d \
 Device_Startup/system_sam3xa.d \
+Drivers/ASF/thirdparty/freertos/freertos-7.3.0/source/FreeRTOS_CLI.d \
+Drivers/ASF/thirdparty/freertos/freertos-7.3.0/source/list.d \
+Drivers/ASF/thirdparty/freertos/freertos-7.3.0/source/portable/gcc/sam/port.d \
+Drivers/ASF/thirdparty/freertos/freertos-7.3.0/source/portable/memmang/heap_4.d \
+Drivers/ASF/thirdparty/freertos/freertos-7.3.0/source/queue.d \
+Drivers/ASF/thirdparty/freertos/freertos-7.3.0/source/tasks.d \
+Drivers/ASF/thirdparty/freertos/freertos-7.3.0/source/timers.d \
 Drivers/Src/ADC_SAM.d \
 Drivers/Src/PIO_SAM.d \
 Drivers/Src/PWM_SAM.d \
@@ -180,133 +226,182 @@ LINKER_SCRIPT_DEP+=  \
 Device_Startup/startup_sam3xa.o: ../Device_Startup/startup_sam3xa.c
 	@echo Building file: $<
 	@echo Invoking: ARM/GNU C Compiler : 6.3.1
-	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\arm\arm-gnu-toolchain\bin\arm-none-eabi-gcc.exe$(QUOTE)  -x c -mthumb -D__SAM3X8E__ -DDEBUG -DDEBUG -DDEBUG  -I"../Inc" -I"../Drivers/Inc" -I"../Core/Inc" -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\arm\CMSIS\5.4.0\CMSIS\Core\Include" -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\SAM3X_DFP\1.0.50\include"  -Og -ffunction-sections -mlong-calls -g3 -Wall -mcpu=cortex-m3 -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
+	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\arm\arm-gnu-toolchain\bin\arm-none-eabi-gcc.exe$(QUOTE)  -x c -mthumb -D__SAM3X8E__ -DDEBUG -DDEBUG -DDEBUG  -I"../Inc" -I"../Drivers/Inc" -I"../Core/Inc" -I"../Drivers/ASF/thirdparty/freertos/freertos-7.3.0/source/include" -I"../Drivers/Config" -I"../src/Config" -I"../Drivers/ASF/thirdparty/freertos/freertos-7.3.0/source/portable/gcc/sam"  -Og -ffunction-sections -mlong-calls -g3 -Wall -mcpu=cortex-m3 -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
 	@echo Finished building: $<
 	
 
 Device_Startup/system_sam3xa.o: ../Device_Startup/system_sam3xa.c
 	@echo Building file: $<
 	@echo Invoking: ARM/GNU C Compiler : 6.3.1
-	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\arm\arm-gnu-toolchain\bin\arm-none-eabi-gcc.exe$(QUOTE)  -x c -mthumb -D__SAM3X8E__ -DDEBUG -DDEBUG -DDEBUG  -I"../Inc" -I"../Drivers/Inc" -I"../Core/Inc" -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\arm\CMSIS\5.4.0\CMSIS\Core\Include" -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\SAM3X_DFP\1.0.50\include"  -Og -ffunction-sections -mlong-calls -g3 -Wall -mcpu=cortex-m3 -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
+	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\arm\arm-gnu-toolchain\bin\arm-none-eabi-gcc.exe$(QUOTE)  -x c -mthumb -D__SAM3X8E__ -DDEBUG -DDEBUG -DDEBUG  -I"../Inc" -I"../Drivers/Inc" -I"../Core/Inc" -I"../Drivers/ASF/thirdparty/freertos/freertos-7.3.0/source/include" -I"../Drivers/Config" -I"../src/Config" -I"../Drivers/ASF/thirdparty/freertos/freertos-7.3.0/source/portable/gcc/sam"  -Og -ffunction-sections -mlong-calls -g3 -Wall -mcpu=cortex-m3 -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
+	@echo Finished building: $<
+	
+
+Drivers/ASF/thirdparty/freertos/freertos-7.3.0/source/FreeRTOS_CLI.o: ../Drivers/ASF/thirdparty/freertos/freertos-7.3.0/source/FreeRTOS_CLI.c
+	@echo Building file: $<
+	@echo Invoking: ARM/GNU C Compiler : 6.3.1
+	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\arm\arm-gnu-toolchain\bin\arm-none-eabi-gcc.exe$(QUOTE)  -x c -mthumb -D__SAM3X8E__ -DDEBUG -DDEBUG -DDEBUG  -I"../Inc" -I"../Drivers/Inc" -I"../Core/Inc" -I"../Drivers/ASF/thirdparty/freertos/freertos-7.3.0/source/include" -I"../Drivers/Config" -I"../src/Config" -I"../Drivers/ASF/thirdparty/freertos/freertos-7.3.0/source/portable/gcc/sam"  -Og -ffunction-sections -mlong-calls -g3 -Wall -mcpu=cortex-m3 -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
+	@echo Finished building: $<
+	
+
+Drivers/ASF/thirdparty/freertos/freertos-7.3.0/source/list.o: ../Drivers/ASF/thirdparty/freertos/freertos-7.3.0/source/list.c
+	@echo Building file: $<
+	@echo Invoking: ARM/GNU C Compiler : 6.3.1
+	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\arm\arm-gnu-toolchain\bin\arm-none-eabi-gcc.exe$(QUOTE)  -x c -mthumb -D__SAM3X8E__ -DDEBUG -DDEBUG -DDEBUG  -I"../Inc" -I"../Drivers/Inc" -I"../Core/Inc" -I"../Drivers/ASF/thirdparty/freertos/freertos-7.3.0/source/include" -I"../Drivers/Config" -I"../src/Config" -I"../Drivers/ASF/thirdparty/freertos/freertos-7.3.0/source/portable/gcc/sam"  -Og -ffunction-sections -mlong-calls -g3 -Wall -mcpu=cortex-m3 -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
+	@echo Finished building: $<
+	
+
+Drivers/ASF/thirdparty/freertos/freertos-7.3.0/source/portable/gcc/sam/port.o: ../Drivers/ASF/thirdparty/freertos/freertos-7.3.0/source/portable/gcc/sam/port.c
+	@echo Building file: $<
+	@echo Invoking: ARM/GNU C Compiler : 6.3.1
+	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\arm\arm-gnu-toolchain\bin\arm-none-eabi-gcc.exe$(QUOTE)  -x c -mthumb -D__SAM3X8E__ -DDEBUG -DDEBUG -DDEBUG  -I"../Inc" -I"../Drivers/Inc" -I"../Core/Inc" -I"../Drivers/ASF/thirdparty/freertos/freertos-7.3.0/source/include" -I"../Drivers/Config" -I"../src/Config" -I"../Drivers/ASF/thirdparty/freertos/freertos-7.3.0/source/portable/gcc/sam"  -Og -ffunction-sections -mlong-calls -g3 -Wall -mcpu=cortex-m3 -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
+	@echo Finished building: $<
+	
+
+Drivers/ASF/thirdparty/freertos/freertos-7.3.0/source/portable/memmang/heap_4.o: ../Drivers/ASF/thirdparty/freertos/freertos-7.3.0/source/portable/memmang/heap_4.c
+	@echo Building file: $<
+	@echo Invoking: ARM/GNU C Compiler : 6.3.1
+	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\arm\arm-gnu-toolchain\bin\arm-none-eabi-gcc.exe$(QUOTE)  -x c -mthumb -D__SAM3X8E__ -DDEBUG -DDEBUG -DDEBUG  -I"../Inc" -I"../Drivers/Inc" -I"../Core/Inc" -I"../Drivers/ASF/thirdparty/freertos/freertos-7.3.0/source/include" -I"../Drivers/Config" -I"../src/Config" -I"../Drivers/ASF/thirdparty/freertos/freertos-7.3.0/source/portable/gcc/sam"  -Og -ffunction-sections -mlong-calls -g3 -Wall -mcpu=cortex-m3 -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
+	@echo Finished building: $<
+	
+
+Drivers/ASF/thirdparty/freertos/freertos-7.3.0/source/queue.o: ../Drivers/ASF/thirdparty/freertos/freertos-7.3.0/source/queue.c
+	@echo Building file: $<
+	@echo Invoking: ARM/GNU C Compiler : 6.3.1
+	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\arm\arm-gnu-toolchain\bin\arm-none-eabi-gcc.exe$(QUOTE)  -x c -mthumb -D__SAM3X8E__ -DDEBUG -DDEBUG -DDEBUG  -I"../Inc" -I"../Drivers/Inc" -I"../Core/Inc" -I"../Drivers/ASF/thirdparty/freertos/freertos-7.3.0/source/include" -I"../Drivers/Config" -I"../src/Config" -I"../Drivers/ASF/thirdparty/freertos/freertos-7.3.0/source/portable/gcc/sam"  -Og -ffunction-sections -mlong-calls -g3 -Wall -mcpu=cortex-m3 -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
+	@echo Finished building: $<
+	
+
+Drivers/ASF/thirdparty/freertos/freertos-7.3.0/source/tasks.o: ../Drivers/ASF/thirdparty/freertos/freertos-7.3.0/source/tasks.c
+	@echo Building file: $<
+	@echo Invoking: ARM/GNU C Compiler : 6.3.1
+	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\arm\arm-gnu-toolchain\bin\arm-none-eabi-gcc.exe$(QUOTE)  -x c -mthumb -D__SAM3X8E__ -DDEBUG -DDEBUG -DDEBUG  -I"../Inc" -I"../Drivers/Inc" -I"../Core/Inc" -I"../Drivers/ASF/thirdparty/freertos/freertos-7.3.0/source/include" -I"../Drivers/Config" -I"../src/Config" -I"../Drivers/ASF/thirdparty/freertos/freertos-7.3.0/source/portable/gcc/sam"  -Og -ffunction-sections -mlong-calls -g3 -Wall -mcpu=cortex-m3 -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
+	@echo Finished building: $<
+	
+
+Drivers/ASF/thirdparty/freertos/freertos-7.3.0/source/timers.o: ../Drivers/ASF/thirdparty/freertos/freertos-7.3.0/source/timers.c
+	@echo Building file: $<
+	@echo Invoking: ARM/GNU C Compiler : 6.3.1
+	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\arm\arm-gnu-toolchain\bin\arm-none-eabi-gcc.exe$(QUOTE)  -x c -mthumb -D__SAM3X8E__ -DDEBUG -DDEBUG -DDEBUG  -I"../Inc" -I"../Drivers/Inc" -I"../Core/Inc" -I"../Drivers/ASF/thirdparty/freertos/freertos-7.3.0/source/include" -I"../Drivers/Config" -I"../src/Config" -I"../Drivers/ASF/thirdparty/freertos/freertos-7.3.0/source/portable/gcc/sam"  -Og -ffunction-sections -mlong-calls -g3 -Wall -mcpu=cortex-m3 -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
 	@echo Finished building: $<
 	
 
 Drivers/Src/ADC_SAM.o: ../Drivers/Src/ADC_SAM.c
 	@echo Building file: $<
 	@echo Invoking: ARM/GNU C Compiler : 6.3.1
-	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\arm\arm-gnu-toolchain\bin\arm-none-eabi-gcc.exe$(QUOTE)  -x c -mthumb -D__SAM3X8E__ -DDEBUG -DDEBUG -DDEBUG  -I"../Inc" -I"../Drivers/Inc" -I"../Core/Inc" -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\arm\CMSIS\5.4.0\CMSIS\Core\Include" -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\SAM3X_DFP\1.0.50\include"  -Og -ffunction-sections -mlong-calls -g3 -Wall -mcpu=cortex-m3 -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
+	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\arm\arm-gnu-toolchain\bin\arm-none-eabi-gcc.exe$(QUOTE)  -x c -mthumb -D__SAM3X8E__ -DDEBUG -DDEBUG -DDEBUG  -I"../Inc" -I"../Drivers/Inc" -I"../Core/Inc" -I"../Drivers/ASF/thirdparty/freertos/freertos-7.3.0/source/include" -I"../Drivers/Config" -I"../src/Config" -I"../Drivers/ASF/thirdparty/freertos/freertos-7.3.0/source/portable/gcc/sam"  -Og -ffunction-sections -mlong-calls -g3 -Wall -mcpu=cortex-m3 -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
 	@echo Finished building: $<
 	
 
 Drivers/Src/PIO_SAM.o: ../Drivers/Src/PIO_SAM.c
 	@echo Building file: $<
 	@echo Invoking: ARM/GNU C Compiler : 6.3.1
-	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\arm\arm-gnu-toolchain\bin\arm-none-eabi-gcc.exe$(QUOTE)  -x c -mthumb -D__SAM3X8E__ -DDEBUG -DDEBUG -DDEBUG  -I"../Inc" -I"../Drivers/Inc" -I"../Core/Inc" -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\arm\CMSIS\5.4.0\CMSIS\Core\Include" -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\SAM3X_DFP\1.0.50\include"  -Og -ffunction-sections -mlong-calls -g3 -Wall -mcpu=cortex-m3 -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
+	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\arm\arm-gnu-toolchain\bin\arm-none-eabi-gcc.exe$(QUOTE)  -x c -mthumb -D__SAM3X8E__ -DDEBUG -DDEBUG -DDEBUG  -I"../Inc" -I"../Drivers/Inc" -I"../Core/Inc" -I"../Drivers/ASF/thirdparty/freertos/freertos-7.3.0/source/include" -I"../Drivers/Config" -I"../src/Config" -I"../Drivers/ASF/thirdparty/freertos/freertos-7.3.0/source/portable/gcc/sam"  -Og -ffunction-sections -mlong-calls -g3 -Wall -mcpu=cortex-m3 -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
 	@echo Finished building: $<
 	
 
 Drivers/Src/PWM_SAM.o: ../Drivers/Src/PWM_SAM.c
 	@echo Building file: $<
 	@echo Invoking: ARM/GNU C Compiler : 6.3.1
-	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\arm\arm-gnu-toolchain\bin\arm-none-eabi-gcc.exe$(QUOTE)  -x c -mthumb -D__SAM3X8E__ -DDEBUG -DDEBUG -DDEBUG  -I"../Inc" -I"../Drivers/Inc" -I"../Core/Inc" -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\arm\CMSIS\5.4.0\CMSIS\Core\Include" -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\SAM3X_DFP\1.0.50\include"  -Og -ffunction-sections -mlong-calls -g3 -Wall -mcpu=cortex-m3 -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
+	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\arm\arm-gnu-toolchain\bin\arm-none-eabi-gcc.exe$(QUOTE)  -x c -mthumb -D__SAM3X8E__ -DDEBUG -DDEBUG -DDEBUG  -I"../Inc" -I"../Drivers/Inc" -I"../Core/Inc" -I"../Drivers/ASF/thirdparty/freertos/freertos-7.3.0/source/include" -I"../Drivers/Config" -I"../src/Config" -I"../Drivers/ASF/thirdparty/freertos/freertos-7.3.0/source/portable/gcc/sam"  -Og -ffunction-sections -mlong-calls -g3 -Wall -mcpu=cortex-m3 -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
 	@echo Finished building: $<
 	
 
 Drivers/Src/RTC_ISL.o: ../Drivers/Src/RTC_ISL.c
 	@echo Building file: $<
 	@echo Invoking: ARM/GNU C Compiler : 6.3.1
-	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\arm\arm-gnu-toolchain\bin\arm-none-eabi-gcc.exe$(QUOTE)  -x c -mthumb -D__SAM3X8E__ -DDEBUG -DDEBUG -DDEBUG  -I"../Inc" -I"../Drivers/Inc" -I"../Core/Inc" -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\arm\CMSIS\5.4.0\CMSIS\Core\Include" -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\SAM3X_DFP\1.0.50\include"  -Og -ffunction-sections -mlong-calls -g3 -Wall -mcpu=cortex-m3 -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
+	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\arm\arm-gnu-toolchain\bin\arm-none-eabi-gcc.exe$(QUOTE)  -x c -mthumb -D__SAM3X8E__ -DDEBUG -DDEBUG -DDEBUG  -I"../Inc" -I"../Drivers/Inc" -I"../Core/Inc" -I"../Drivers/ASF/thirdparty/freertos/freertos-7.3.0/source/include" -I"../Drivers/Config" -I"../src/Config" -I"../Drivers/ASF/thirdparty/freertos/freertos-7.3.0/source/portable/gcc/sam"  -Og -ffunction-sections -mlong-calls -g3 -Wall -mcpu=cortex-m3 -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
 	@echo Finished building: $<
 	
 
 Drivers/Src/SPI_SAM.o: ../Drivers/Src/SPI_SAM.c
 	@echo Building file: $<
 	@echo Invoking: ARM/GNU C Compiler : 6.3.1
-	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\arm\arm-gnu-toolchain\bin\arm-none-eabi-gcc.exe$(QUOTE)  -x c -mthumb -D__SAM3X8E__ -DDEBUG -DDEBUG -DDEBUG  -I"../Inc" -I"../Drivers/Inc" -I"../Core/Inc" -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\arm\CMSIS\5.4.0\CMSIS\Core\Include" -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\SAM3X_DFP\1.0.50\include"  -Og -ffunction-sections -mlong-calls -g3 -Wall -mcpu=cortex-m3 -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
+	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\arm\arm-gnu-toolchain\bin\arm-none-eabi-gcc.exe$(QUOTE)  -x c -mthumb -D__SAM3X8E__ -DDEBUG -DDEBUG -DDEBUG  -I"../Inc" -I"../Drivers/Inc" -I"../Core/Inc" -I"../Drivers/ASF/thirdparty/freertos/freertos-7.3.0/source/include" -I"../Drivers/Config" -I"../src/Config" -I"../Drivers/ASF/thirdparty/freertos/freertos-7.3.0/source/portable/gcc/sam"  -Og -ffunction-sections -mlong-calls -g3 -Wall -mcpu=cortex-m3 -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
 	@echo Finished building: $<
 	
 
 Drivers/Src/TWI_SAM.o: ../Drivers/Src/TWI_SAM.c
 	@echo Building file: $<
 	@echo Invoking: ARM/GNU C Compiler : 6.3.1
-	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\arm\arm-gnu-toolchain\bin\arm-none-eabi-gcc.exe$(QUOTE)  -x c -mthumb -D__SAM3X8E__ -DDEBUG -DDEBUG -DDEBUG  -I"../Inc" -I"../Drivers/Inc" -I"../Core/Inc" -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\arm\CMSIS\5.4.0\CMSIS\Core\Include" -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\SAM3X_DFP\1.0.50\include"  -Og -ffunction-sections -mlong-calls -g3 -Wall -mcpu=cortex-m3 -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
+	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\arm\arm-gnu-toolchain\bin\arm-none-eabi-gcc.exe$(QUOTE)  -x c -mthumb -D__SAM3X8E__ -DDEBUG -DDEBUG -DDEBUG  -I"../Inc" -I"../Drivers/Inc" -I"../Core/Inc" -I"../Drivers/ASF/thirdparty/freertos/freertos-7.3.0/source/include" -I"../Drivers/Config" -I"../src/Config" -I"../Drivers/ASF/thirdparty/freertos/freertos-7.3.0/source/portable/gcc/sam"  -Og -ffunction-sections -mlong-calls -g3 -Wall -mcpu=cortex-m3 -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
 	@echo Finished building: $<
 	
 
 Drivers/Src/usart.o: ../Drivers/Src/usart.c
 	@echo Building file: $<
 	@echo Invoking: ARM/GNU C Compiler : 6.3.1
-	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\arm\arm-gnu-toolchain\bin\arm-none-eabi-gcc.exe$(QUOTE)  -x c -mthumb -D__SAM3X8E__ -DDEBUG -DDEBUG -DDEBUG  -I"../Inc" -I"../Drivers/Inc" -I"../Core/Inc" -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\arm\CMSIS\5.4.0\CMSIS\Core\Include" -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\SAM3X_DFP\1.0.50\include"  -Og -ffunction-sections -mlong-calls -g3 -Wall -mcpu=cortex-m3 -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
+	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\arm\arm-gnu-toolchain\bin\arm-none-eabi-gcc.exe$(QUOTE)  -x c -mthumb -D__SAM3X8E__ -DDEBUG -DDEBUG -DDEBUG  -I"../Inc" -I"../Drivers/Inc" -I"../Core/Inc" -I"../Drivers/ASF/thirdparty/freertos/freertos-7.3.0/source/include" -I"../Drivers/Config" -I"../src/Config" -I"../Drivers/ASF/thirdparty/freertos/freertos-7.3.0/source/portable/gcc/sam"  -Og -ffunction-sections -mlong-calls -g3 -Wall -mcpu=cortex-m3 -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
 	@echo Finished building: $<
 	
 
 Drivers/Src/USART_SAM.o: ../Drivers/Src/USART_SAM.c
 	@echo Building file: $<
 	@echo Invoking: ARM/GNU C Compiler : 6.3.1
-	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\arm\arm-gnu-toolchain\bin\arm-none-eabi-gcc.exe$(QUOTE)  -x c -mthumb -D__SAM3X8E__ -DDEBUG -DDEBUG -DDEBUG  -I"../Inc" -I"../Drivers/Inc" -I"../Core/Inc" -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\arm\CMSIS\5.4.0\CMSIS\Core\Include" -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\SAM3X_DFP\1.0.50\include"  -Og -ffunction-sections -mlong-calls -g3 -Wall -mcpu=cortex-m3 -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
+	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\arm\arm-gnu-toolchain\bin\arm-none-eabi-gcc.exe$(QUOTE)  -x c -mthumb -D__SAM3X8E__ -DDEBUG -DDEBUG -DDEBUG  -I"../Inc" -I"../Drivers/Inc" -I"../Core/Inc" -I"../Drivers/ASF/thirdparty/freertos/freertos-7.3.0/source/include" -I"../Drivers/Config" -I"../src/Config" -I"../Drivers/ASF/thirdparty/freertos/freertos-7.3.0/source/portable/gcc/sam"  -Og -ffunction-sections -mlong-calls -g3 -Wall -mcpu=cortex-m3 -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
 	@echo Finished building: $<
 	
 
 ./main.o: .././main.c
 	@echo Building file: $<
 	@echo Invoking: ARM/GNU C Compiler : 6.3.1
-	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\arm\arm-gnu-toolchain\bin\arm-none-eabi-gcc.exe$(QUOTE)  -x c -mthumb -D__SAM3X8E__ -DDEBUG -DDEBUG -DDEBUG  -I"../Inc" -I"../Drivers/Inc" -I"../Core/Inc" -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\arm\CMSIS\5.4.0\CMSIS\Core\Include" -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\SAM3X_DFP\1.0.50\include"  -Og -ffunction-sections -mlong-calls -g3 -Wall -mcpu=cortex-m3 -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
+	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\arm\arm-gnu-toolchain\bin\arm-none-eabi-gcc.exe$(QUOTE)  -x c -mthumb -D__SAM3X8E__ -DDEBUG -DDEBUG -DDEBUG  -I"../Inc" -I"../Drivers/Inc" -I"../Core/Inc" -I"../Drivers/ASF/thirdparty/freertos/freertos-7.3.0/source/include" -I"../Drivers/Config" -I"../src/Config" -I"../Drivers/ASF/thirdparty/freertos/freertos-7.3.0/source/portable/gcc/sam"  -Og -ffunction-sections -mlong-calls -g3 -Wall -mcpu=cortex-m3 -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
 	@echo Finished building: $<
 	
 
 Src/ADC_init_SAM.o: ../Src/ADC_init_SAM.c
 	@echo Building file: $<
 	@echo Invoking: ARM/GNU C Compiler : 6.3.1
-	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\arm\arm-gnu-toolchain\bin\arm-none-eabi-gcc.exe$(QUOTE)  -x c -mthumb -D__SAM3X8E__ -DDEBUG -DDEBUG -DDEBUG  -I"../Inc" -I"../Drivers/Inc" -I"../Core/Inc" -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\arm\CMSIS\5.4.0\CMSIS\Core\Include" -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\SAM3X_DFP\1.0.50\include"  -Og -ffunction-sections -mlong-calls -g3 -Wall -mcpu=cortex-m3 -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
+	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\arm\arm-gnu-toolchain\bin\arm-none-eabi-gcc.exe$(QUOTE)  -x c -mthumb -D__SAM3X8E__ -DDEBUG -DDEBUG -DDEBUG  -I"../Inc" -I"../Drivers/Inc" -I"../Core/Inc" -I"../Drivers/ASF/thirdparty/freertos/freertos-7.3.0/source/include" -I"../Drivers/Config" -I"../src/Config" -I"../Drivers/ASF/thirdparty/freertos/freertos-7.3.0/source/portable/gcc/sam"  -Og -ffunction-sections -mlong-calls -g3 -Wall -mcpu=cortex-m3 -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
 	@echo Finished building: $<
 	
 
 Src/DAC_init_SAM.o: ../Src/DAC_init_SAM.c
 	@echo Building file: $<
 	@echo Invoking: ARM/GNU C Compiler : 6.3.1
-	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\arm\arm-gnu-toolchain\bin\arm-none-eabi-gcc.exe$(QUOTE)  -x c -mthumb -D__SAM3X8E__ -DDEBUG -DDEBUG -DDEBUG  -I"../Inc" -I"../Drivers/Inc" -I"../Core/Inc" -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\arm\CMSIS\5.4.0\CMSIS\Core\Include" -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\SAM3X_DFP\1.0.50\include"  -Og -ffunction-sections -mlong-calls -g3 -Wall -mcpu=cortex-m3 -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
+	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\arm\arm-gnu-toolchain\bin\arm-none-eabi-gcc.exe$(QUOTE)  -x c -mthumb -D__SAM3X8E__ -DDEBUG -DDEBUG -DDEBUG  -I"../Inc" -I"../Drivers/Inc" -I"../Core/Inc" -I"../Drivers/ASF/thirdparty/freertos/freertos-7.3.0/source/include" -I"../Drivers/Config" -I"../src/Config" -I"../Drivers/ASF/thirdparty/freertos/freertos-7.3.0/source/portable/gcc/sam"  -Og -ffunction-sections -mlong-calls -g3 -Wall -mcpu=cortex-m3 -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
 	@echo Finished building: $<
 	
 
 Src/pio_init.o: ../Src/pio_init.c
 	@echo Building file: $<
 	@echo Invoking: ARM/GNU C Compiler : 6.3.1
-	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\arm\arm-gnu-toolchain\bin\arm-none-eabi-gcc.exe$(QUOTE)  -x c -mthumb -D__SAM3X8E__ -DDEBUG -DDEBUG -DDEBUG  -I"../Inc" -I"../Drivers/Inc" -I"../Core/Inc" -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\arm\CMSIS\5.4.0\CMSIS\Core\Include" -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\SAM3X_DFP\1.0.50\include"  -Og -ffunction-sections -mlong-calls -g3 -Wall -mcpu=cortex-m3 -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
+	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\arm\arm-gnu-toolchain\bin\arm-none-eabi-gcc.exe$(QUOTE)  -x c -mthumb -D__SAM3X8E__ -DDEBUG -DDEBUG -DDEBUG  -I"../Inc" -I"../Drivers/Inc" -I"../Core/Inc" -I"../Drivers/ASF/thirdparty/freertos/freertos-7.3.0/source/include" -I"../Drivers/Config" -I"../src/Config" -I"../Drivers/ASF/thirdparty/freertos/freertos-7.3.0/source/portable/gcc/sam"  -Og -ffunction-sections -mlong-calls -g3 -Wall -mcpu=cortex-m3 -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
 	@echo Finished building: $<
 	
 
 Src/PWM_init_SAM.o: ../Src/PWM_init_SAM.c
 	@echo Building file: $<
 	@echo Invoking: ARM/GNU C Compiler : 6.3.1
-	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\arm\arm-gnu-toolchain\bin\arm-none-eabi-gcc.exe$(QUOTE)  -x c -mthumb -D__SAM3X8E__ -DDEBUG -DDEBUG -DDEBUG  -I"../Inc" -I"../Drivers/Inc" -I"../Core/Inc" -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\arm\CMSIS\5.4.0\CMSIS\Core\Include" -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\SAM3X_DFP\1.0.50\include"  -Og -ffunction-sections -mlong-calls -g3 -Wall -mcpu=cortex-m3 -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
+	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\arm\arm-gnu-toolchain\bin\arm-none-eabi-gcc.exe$(QUOTE)  -x c -mthumb -D__SAM3X8E__ -DDEBUG -DDEBUG -DDEBUG  -I"../Inc" -I"../Drivers/Inc" -I"../Core/Inc" -I"../Drivers/ASF/thirdparty/freertos/freertos-7.3.0/source/include" -I"../Drivers/Config" -I"../src/Config" -I"../Drivers/ASF/thirdparty/freertos/freertos-7.3.0/source/portable/gcc/sam"  -Og -ffunction-sections -mlong-calls -g3 -Wall -mcpu=cortex-m3 -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
 	@echo Finished building: $<
 	
 
 Src/RTC_init_ISL12022M.o: ../Src/RTC_init_ISL12022M.c
 	@echo Building file: $<
 	@echo Invoking: ARM/GNU C Compiler : 6.3.1
-	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\arm\arm-gnu-toolchain\bin\arm-none-eabi-gcc.exe$(QUOTE)  -x c -mthumb -D__SAM3X8E__ -DDEBUG -DDEBUG -DDEBUG  -I"../Inc" -I"../Drivers/Inc" -I"../Core/Inc" -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\arm\CMSIS\5.4.0\CMSIS\Core\Include" -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\SAM3X_DFP\1.0.50\include"  -Og -ffunction-sections -mlong-calls -g3 -Wall -mcpu=cortex-m3 -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
+	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\arm\arm-gnu-toolchain\bin\arm-none-eabi-gcc.exe$(QUOTE)  -x c -mthumb -D__SAM3X8E__ -DDEBUG -DDEBUG -DDEBUG  -I"../Inc" -I"../Drivers/Inc" -I"../Core/Inc" -I"../Drivers/ASF/thirdparty/freertos/freertos-7.3.0/source/include" -I"../Drivers/Config" -I"../src/Config" -I"../Drivers/ASF/thirdparty/freertos/freertos-7.3.0/source/portable/gcc/sam"  -Og -ffunction-sections -mlong-calls -g3 -Wall -mcpu=cortex-m3 -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
 	@echo Finished building: $<
 	
 
 Src/SPI_init_SAM.o: ../Src/SPI_init_SAM.c
 	@echo Building file: $<
 	@echo Invoking: ARM/GNU C Compiler : 6.3.1
-	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\arm\arm-gnu-toolchain\bin\arm-none-eabi-gcc.exe$(QUOTE)  -x c -mthumb -D__SAM3X8E__ -DDEBUG -DDEBUG -DDEBUG  -I"../Inc" -I"../Drivers/Inc" -I"../Core/Inc" -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\arm\CMSIS\5.4.0\CMSIS\Core\Include" -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\SAM3X_DFP\1.0.50\include"  -Og -ffunction-sections -mlong-calls -g3 -Wall -mcpu=cortex-m3 -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
+	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\arm\arm-gnu-toolchain\bin\arm-none-eabi-gcc.exe$(QUOTE)  -x c -mthumb -D__SAM3X8E__ -DDEBUG -DDEBUG -DDEBUG  -I"../Inc" -I"../Drivers/Inc" -I"../Core/Inc" -I"../Drivers/ASF/thirdparty/freertos/freertos-7.3.0/source/include" -I"../Drivers/Config" -I"../src/Config" -I"../Drivers/ASF/thirdparty/freertos/freertos-7.3.0/source/portable/gcc/sam"  -Og -ffunction-sections -mlong-calls -g3 -Wall -mcpu=cortex-m3 -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
 	@echo Finished building: $<
 	
 
 Src/TWI_init_SAM.o: ../Src/TWI_init_SAM.c
 	@echo Building file: $<
 	@echo Invoking: ARM/GNU C Compiler : 6.3.1
-	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\arm\arm-gnu-toolchain\bin\arm-none-eabi-gcc.exe$(QUOTE)  -x c -mthumb -D__SAM3X8E__ -DDEBUG -DDEBUG -DDEBUG  -I"../Inc" -I"../Drivers/Inc" -I"../Core/Inc" -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\arm\CMSIS\5.4.0\CMSIS\Core\Include" -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\SAM3X_DFP\1.0.50\include"  -Og -ffunction-sections -mlong-calls -g3 -Wall -mcpu=cortex-m3 -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
+	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\arm\arm-gnu-toolchain\bin\arm-none-eabi-gcc.exe$(QUOTE)  -x c -mthumb -D__SAM3X8E__ -DDEBUG -DDEBUG -DDEBUG  -I"../Inc" -I"../Drivers/Inc" -I"../Core/Inc" -I"../Drivers/ASF/thirdparty/freertos/freertos-7.3.0/source/include" -I"../Drivers/Config" -I"../src/Config" -I"../Drivers/ASF/thirdparty/freertos/freertos-7.3.0/source/portable/gcc/sam"  -Og -ffunction-sections -mlong-calls -g3 -Wall -mcpu=cortex-m3 -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
 	@echo Finished building: $<
 	
 
 Src/USART_init_SAM.o: ../Src/USART_init_SAM.c
 	@echo Building file: $<
 	@echo Invoking: ARM/GNU C Compiler : 6.3.1
-	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\arm\arm-gnu-toolchain\bin\arm-none-eabi-gcc.exe$(QUOTE)  -x c -mthumb -D__SAM3X8E__ -DDEBUG -DDEBUG -DDEBUG  -I"../Inc" -I"../Drivers/Inc" -I"../Core/Inc" -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\arm\CMSIS\5.4.0\CMSIS\Core\Include" -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\SAM3X_DFP\1.0.50\include"  -Og -ffunction-sections -mlong-calls -g3 -Wall -mcpu=cortex-m3 -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
+	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\arm\arm-gnu-toolchain\bin\arm-none-eabi-gcc.exe$(QUOTE)  -x c -mthumb -D__SAM3X8E__ -DDEBUG -DDEBUG -DDEBUG  -I"../Inc" -I"../Drivers/Inc" -I"../Core/Inc" -I"../Drivers/ASF/thirdparty/freertos/freertos-7.3.0/source/include" -I"../Drivers/Config" -I"../src/Config" -I"../Drivers/ASF/thirdparty/freertos/freertos-7.3.0/source/portable/gcc/sam"  -Og -ffunction-sections -mlong-calls -g3 -Wall -mcpu=cortex-m3 -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
 	@echo Finished building: $<
 	
 

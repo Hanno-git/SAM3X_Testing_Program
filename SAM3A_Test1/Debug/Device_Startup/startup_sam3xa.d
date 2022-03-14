@@ -1,6 +1,6 @@
 Device_Startup/startup_sam3xa.d Device_Startup/startup_sam3xa.o: \
  ../Device_Startup/startup_sam3xa.c ../Drivers/Inc/sam3xa.h \
- C:\Program\ Files\ (x86)\Atmel\Studio\7.0\Packs\atmel\SAM3X_DFP\1.0.50\include/sam3x8e.h \
+ ../Drivers/Inc/sam3x8e.h \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\lib\gcc\arm-none-eabi\6.3.1\include\stdint.h \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-none-eabi\include\stdint.h \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-none-eabi\include\machine\_default_types.h \
@@ -10,79 +10,45 @@ Device_Startup/startup_sam3xa.d Device_Startup/startup_sam3xa.o: \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-none-eabi\include\sys\_stdint.h \
  ../Core/Inc/core_cm3.h ../Core/Inc/cmsis_version.h \
  ../Core/Inc/cmsis_compiler.h ../Core/Inc/cmsis_gcc.h \
- ../Core/Inc/mpu_armv7.h \
- C:\Program\ Files\ (x86)\Atmel\Studio\7.0\Packs\atmel\SAM3X_DFP\1.0.50\include/system_sam3xa.h \
- C:\Program\ Files\ (x86)\Atmel\Studio\7.0\Packs\atmel\SAM3X_DFP\1.0.50\include/component/adc.h \
- C:\Program\ Files\ (x86)\Atmel\Studio\7.0\Packs\atmel\SAM3X_DFP\1.0.50\include/component/can.h \
- C:\Program\ Files\ (x86)\Atmel\Studio\7.0\Packs\atmel\SAM3X_DFP\1.0.50\include/component/chipid.h \
- C:\Program\ Files\ (x86)\Atmel\Studio\7.0\Packs\atmel\SAM3X_DFP\1.0.50\include/component/dacc.h \
- C:\Program\ Files\ (x86)\Atmel\Studio\7.0\Packs\atmel\SAM3X_DFP\1.0.50\include/component/dmac.h \
- C:\Program\ Files\ (x86)\Atmel\Studio\7.0\Packs\atmel\SAM3X_DFP\1.0.50\include/component/efc.h \
- C:\Program\ Files\ (x86)\Atmel\Studio\7.0\Packs\atmel\SAM3X_DFP\1.0.50\include/component/emac.h \
- C:\Program\ Files\ (x86)\Atmel\Studio\7.0\Packs\atmel\SAM3X_DFP\1.0.50\include/component/gpbr.h \
- C:\Program\ Files\ (x86)\Atmel\Studio\7.0\Packs\atmel\SAM3X_DFP\1.0.50\include/component/hsmci.h \
- C:\Program\ Files\ (x86)\Atmel\Studio\7.0\Packs\atmel\SAM3X_DFP\1.0.50\include/component/matrix.h \
- C:\Program\ Files\ (x86)\Atmel\Studio\7.0\Packs\atmel\SAM3X_DFP\1.0.50\include/component/pdc.h \
- C:\Program\ Files\ (x86)\Atmel\Studio\7.0\Packs\atmel\SAM3X_DFP\1.0.50\include/component/pio.h \
- C:\Program\ Files\ (x86)\Atmel\Studio\7.0\Packs\atmel\SAM3X_DFP\1.0.50\include/component/pmc.h \
- C:\Program\ Files\ (x86)\Atmel\Studio\7.0\Packs\atmel\SAM3X_DFP\1.0.50\include/component/pwm.h \
- C:\Program\ Files\ (x86)\Atmel\Studio\7.0\Packs\atmel\SAM3X_DFP\1.0.50\include/component/rstc.h \
- C:\Program\ Files\ (x86)\Atmel\Studio\7.0\Packs\atmel\SAM3X_DFP\1.0.50\include/component/rtc.h \
- C:\Program\ Files\ (x86)\Atmel\Studio\7.0\Packs\atmel\SAM3X_DFP\1.0.50\include/component/rtt.h \
- C:\Program\ Files\ (x86)\Atmel\Studio\7.0\Packs\atmel\SAM3X_DFP\1.0.50\include/component/smc.h \
- C:\Program\ Files\ (x86)\Atmel\Studio\7.0\Packs\atmel\SAM3X_DFP\1.0.50\include/component/spi.h \
- C:\Program\ Files\ (x86)\Atmel\Studio\7.0\Packs\atmel\SAM3X_DFP\1.0.50\include/component/ssc.h \
- C:\Program\ Files\ (x86)\Atmel\Studio\7.0\Packs\atmel\SAM3X_DFP\1.0.50\include/component/supc.h \
- C:\Program\ Files\ (x86)\Atmel\Studio\7.0\Packs\atmel\SAM3X_DFP\1.0.50\include/component/tc.h \
- C:\Program\ Files\ (x86)\Atmel\Studio\7.0\Packs\atmel\SAM3X_DFP\1.0.50\include/component/trng.h \
- C:\Program\ Files\ (x86)\Atmel\Studio\7.0\Packs\atmel\SAM3X_DFP\1.0.50\include/component/twi.h \
- C:\Program\ Files\ (x86)\Atmel\Studio\7.0\Packs\atmel\SAM3X_DFP\1.0.50\include/component/uart.h \
- C:\Program\ Files\ (x86)\Atmel\Studio\7.0\Packs\atmel\SAM3X_DFP\1.0.50\include/component/uotghs.h \
- C:\Program\ Files\ (x86)\Atmel\Studio\7.0\Packs\atmel\SAM3X_DFP\1.0.50\include/component/usart.h \
- C:\Program\ Files\ (x86)\Atmel\Studio\7.0\Packs\atmel\SAM3X_DFP\1.0.50\include/component/wdt.h \
- C:\Program\ Files\ (x86)\Atmel\Studio\7.0\Packs\atmel\SAM3X_DFP\1.0.50\include/instance/hsmci.h \
- C:\Program\ Files\ (x86)\Atmel\Studio\7.0\Packs\atmel\SAM3X_DFP\1.0.50\include/instance/ssc.h \
- C:\Program\ Files\ (x86)\Atmel\Studio\7.0\Packs\atmel\SAM3X_DFP\1.0.50\include/instance/spi0.h \
- C:\Program\ Files\ (x86)\Atmel\Studio\7.0\Packs\atmel\SAM3X_DFP\1.0.50\include/instance/tc0.h \
- C:\Program\ Files\ (x86)\Atmel\Studio\7.0\Packs\atmel\SAM3X_DFP\1.0.50\include/instance/tc1.h \
- C:\Program\ Files\ (x86)\Atmel\Studio\7.0\Packs\atmel\SAM3X_DFP\1.0.50\include/instance/tc2.h \
- C:\Program\ Files\ (x86)\Atmel\Studio\7.0\Packs\atmel\SAM3X_DFP\1.0.50\include/instance/twi0.h \
- C:\Program\ Files\ (x86)\Atmel\Studio\7.0\Packs\atmel\SAM3X_DFP\1.0.50\include/instance/twi1.h \
- C:\Program\ Files\ (x86)\Atmel\Studio\7.0\Packs\atmel\SAM3X_DFP\1.0.50\include/instance/pwm.h \
- C:\Program\ Files\ (x86)\Atmel\Studio\7.0\Packs\atmel\SAM3X_DFP\1.0.50\include/instance/usart0.h \
- C:\Program\ Files\ (x86)\Atmel\Studio\7.0\Packs\atmel\SAM3X_DFP\1.0.50\include/instance/usart1.h \
- C:\Program\ Files\ (x86)\Atmel\Studio\7.0\Packs\atmel\SAM3X_DFP\1.0.50\include/instance/usart2.h \
- C:\Program\ Files\ (x86)\Atmel\Studio\7.0\Packs\atmel\SAM3X_DFP\1.0.50\include/instance/usart3.h \
- C:\Program\ Files\ (x86)\Atmel\Studio\7.0\Packs\atmel\SAM3X_DFP\1.0.50\include/instance/uotghs.h \
- C:\Program\ Files\ (x86)\Atmel\Studio\7.0\Packs\atmel\SAM3X_DFP\1.0.50\include/instance/emac.h \
- C:\Program\ Files\ (x86)\Atmel\Studio\7.0\Packs\atmel\SAM3X_DFP\1.0.50\include/instance/can0.h \
- C:\Program\ Files\ (x86)\Atmel\Studio\7.0\Packs\atmel\SAM3X_DFP\1.0.50\include/instance/can1.h \
- C:\Program\ Files\ (x86)\Atmel\Studio\7.0\Packs\atmel\SAM3X_DFP\1.0.50\include/instance/trng.h \
- C:\Program\ Files\ (x86)\Atmel\Studio\7.0\Packs\atmel\SAM3X_DFP\1.0.50\include/instance/adc.h \
- C:\Program\ Files\ (x86)\Atmel\Studio\7.0\Packs\atmel\SAM3X_DFP\1.0.50\include/instance/dmac.h \
- C:\Program\ Files\ (x86)\Atmel\Studio\7.0\Packs\atmel\SAM3X_DFP\1.0.50\include/instance/dacc.h \
- C:\Program\ Files\ (x86)\Atmel\Studio\7.0\Packs\atmel\SAM3X_DFP\1.0.50\include/instance/smc.h \
- C:\Program\ Files\ (x86)\Atmel\Studio\7.0\Packs\atmel\SAM3X_DFP\1.0.50\include/instance/matrix.h \
- C:\Program\ Files\ (x86)\Atmel\Studio\7.0\Packs\atmel\SAM3X_DFP\1.0.50\include/instance/pmc.h \
- C:\Program\ Files\ (x86)\Atmel\Studio\7.0\Packs\atmel\SAM3X_DFP\1.0.50\include/instance/uart.h \
- C:\Program\ Files\ (x86)\Atmel\Studio\7.0\Packs\atmel\SAM3X_DFP\1.0.50\include/instance/chipid.h \
- C:\Program\ Files\ (x86)\Atmel\Studio\7.0\Packs\atmel\SAM3X_DFP\1.0.50\include/instance/efc0.h \
- C:\Program\ Files\ (x86)\Atmel\Studio\7.0\Packs\atmel\SAM3X_DFP\1.0.50\include/instance/efc1.h \
- C:\Program\ Files\ (x86)\Atmel\Studio\7.0\Packs\atmel\SAM3X_DFP\1.0.50\include/instance/pioa.h \
- C:\Program\ Files\ (x86)\Atmel\Studio\7.0\Packs\atmel\SAM3X_DFP\1.0.50\include/instance/piob.h \
- C:\Program\ Files\ (x86)\Atmel\Studio\7.0\Packs\atmel\SAM3X_DFP\1.0.50\include/instance/pioc.h \
- C:\Program\ Files\ (x86)\Atmel\Studio\7.0\Packs\atmel\SAM3X_DFP\1.0.50\include/instance/piod.h \
- C:\Program\ Files\ (x86)\Atmel\Studio\7.0\Packs\atmel\SAM3X_DFP\1.0.50\include/instance/rstc.h \
- C:\Program\ Files\ (x86)\Atmel\Studio\7.0\Packs\atmel\SAM3X_DFP\1.0.50\include/instance/supc.h \
- C:\Program\ Files\ (x86)\Atmel\Studio\7.0\Packs\atmel\SAM3X_DFP\1.0.50\include/instance/rtt.h \
- C:\Program\ Files\ (x86)\Atmel\Studio\7.0\Packs\atmel\SAM3X_DFP\1.0.50\include/instance/wdt.h \
- C:\Program\ Files\ (x86)\Atmel\Studio\7.0\Packs\atmel\SAM3X_DFP\1.0.50\include/instance/rtc.h \
- C:\Program\ Files\ (x86)\Atmel\Studio\7.0\Packs\atmel\SAM3X_DFP\1.0.50\include/instance/gpbr.h \
- C:\Program\ Files\ (x86)\Atmel\Studio\7.0\Packs\atmel\SAM3X_DFP\1.0.50\include/pio/sam3x8e.h
+ ../Core/Inc/mpu_armv7.h ../Drivers/Inc/system_sam3xa.h \
+ ../Drivers/Inc/component/adc.h ../Drivers/Inc/component/can.h \
+ ../Drivers/Inc/component/chipid.h ../Drivers/Inc/component/dacc.h \
+ ../Drivers/Inc/component/dmac.h ../Drivers/Inc/component/efc.h \
+ ../Drivers/Inc/component/emac.h ../Drivers/Inc/component/gpbr.h \
+ ../Drivers/Inc/component/hsmci.h ../Drivers/Inc/component/matrix.h \
+ ../Drivers/Inc/component/pdc.h ../Drivers/Inc/component/pio.h \
+ ../Drivers/Inc/component/pmc.h ../Drivers/Inc/component/pwm.h \
+ ../Drivers/Inc/component/rstc.h ../Drivers/Inc/component/rtc.h \
+ ../Drivers/Inc/component/rtt.h ../Drivers/Inc/component/smc.h \
+ ../Drivers/Inc/component/spi.h ../Drivers/Inc/component/ssc.h \
+ ../Drivers/Inc/component/supc.h ../Drivers/Inc/component/tc.h \
+ ../Drivers/Inc/component/trng.h ../Drivers/Inc/component/twi.h \
+ ../Drivers/Inc/component/uart.h ../Drivers/Inc/component/uotghs.h \
+ ../Drivers/Inc/component/usart.h ../Drivers/Inc/component/wdt.h \
+ ../Drivers/Inc/instance/hsmci.h ../Drivers/Inc/instance/ssc.h \
+ ../Drivers/Inc/instance/spi0.h ../Drivers/Inc/instance/tc0.h \
+ ../Drivers/Inc/instance/tc1.h ../Drivers/Inc/instance/tc2.h \
+ ../Drivers/Inc/instance/twi0.h ../Drivers/Inc/instance/twi1.h \
+ ../Drivers/Inc/instance/pwm.h ../Drivers/Inc/instance/usart0.h \
+ ../Drivers/Inc/instance/usart1.h ../Drivers/Inc/instance/usart2.h \
+ ../Drivers/Inc/instance/usart3.h ../Drivers/Inc/instance/uotghs.h \
+ ../Drivers/Inc/instance/emac.h ../Drivers/Inc/instance/can0.h \
+ ../Drivers/Inc/instance/can1.h ../Drivers/Inc/instance/trng.h \
+ ../Drivers/Inc/instance/adc.h ../Drivers/Inc/instance/dmac.h \
+ ../Drivers/Inc/instance/dacc.h ../Drivers/Inc/instance/smc.h \
+ ../Drivers/Inc/instance/matrix.h ../Drivers/Inc/instance/pmc.h \
+ ../Drivers/Inc/instance/uart.h ../Drivers/Inc/instance/chipid.h \
+ ../Drivers/Inc/instance/efc0.h ../Drivers/Inc/instance/efc1.h \
+ ../Drivers/Inc/instance/pioa.h ../Drivers/Inc/instance/piob.h \
+ ../Drivers/Inc/instance/pioc.h ../Drivers/Inc/instance/piod.h \
+ ../Drivers/Inc/instance/rstc.h ../Drivers/Inc/instance/supc.h \
+ ../Drivers/Inc/instance/rtt.h ../Drivers/Inc/instance/wdt.h \
+ ../Drivers/Inc/instance/rtc.h ../Drivers/Inc/instance/gpbr.h \
+ ../Drivers/Inc/pio/sam3x8e.h
 
 ../Drivers/Inc/sam3xa.h:
 
-C:\Program\ Files\ (x86)\Atmel\Studio\7.0\Packs\atmel\SAM3X_DFP\1.0.50\include/sam3x8e.h:
+../Drivers/Inc/sam3x8e.h:
 
 c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\lib\gcc\arm-none-eabi\6.3.1\include\stdint.h:
 
@@ -108,138 +74,138 @@ c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-no
 
 ../Core/Inc/mpu_armv7.h:
 
-C:\Program\ Files\ (x86)\Atmel\Studio\7.0\Packs\atmel\SAM3X_DFP\1.0.50\include/system_sam3xa.h:
+../Drivers/Inc/system_sam3xa.h:
 
-C:\Program\ Files\ (x86)\Atmel\Studio\7.0\Packs\atmel\SAM3X_DFP\1.0.50\include/component/adc.h:
+../Drivers/Inc/component/adc.h:
 
-C:\Program\ Files\ (x86)\Atmel\Studio\7.0\Packs\atmel\SAM3X_DFP\1.0.50\include/component/can.h:
+../Drivers/Inc/component/can.h:
 
-C:\Program\ Files\ (x86)\Atmel\Studio\7.0\Packs\atmel\SAM3X_DFP\1.0.50\include/component/chipid.h:
+../Drivers/Inc/component/chipid.h:
 
-C:\Program\ Files\ (x86)\Atmel\Studio\7.0\Packs\atmel\SAM3X_DFP\1.0.50\include/component/dacc.h:
+../Drivers/Inc/component/dacc.h:
 
-C:\Program\ Files\ (x86)\Atmel\Studio\7.0\Packs\atmel\SAM3X_DFP\1.0.50\include/component/dmac.h:
+../Drivers/Inc/component/dmac.h:
 
-C:\Program\ Files\ (x86)\Atmel\Studio\7.0\Packs\atmel\SAM3X_DFP\1.0.50\include/component/efc.h:
+../Drivers/Inc/component/efc.h:
 
-C:\Program\ Files\ (x86)\Atmel\Studio\7.0\Packs\atmel\SAM3X_DFP\1.0.50\include/component/emac.h:
+../Drivers/Inc/component/emac.h:
 
-C:\Program\ Files\ (x86)\Atmel\Studio\7.0\Packs\atmel\SAM3X_DFP\1.0.50\include/component/gpbr.h:
+../Drivers/Inc/component/gpbr.h:
 
-C:\Program\ Files\ (x86)\Atmel\Studio\7.0\Packs\atmel\SAM3X_DFP\1.0.50\include/component/hsmci.h:
+../Drivers/Inc/component/hsmci.h:
 
-C:\Program\ Files\ (x86)\Atmel\Studio\7.0\Packs\atmel\SAM3X_DFP\1.0.50\include/component/matrix.h:
+../Drivers/Inc/component/matrix.h:
 
-C:\Program\ Files\ (x86)\Atmel\Studio\7.0\Packs\atmel\SAM3X_DFP\1.0.50\include/component/pdc.h:
+../Drivers/Inc/component/pdc.h:
 
-C:\Program\ Files\ (x86)\Atmel\Studio\7.0\Packs\atmel\SAM3X_DFP\1.0.50\include/component/pio.h:
+../Drivers/Inc/component/pio.h:
 
-C:\Program\ Files\ (x86)\Atmel\Studio\7.0\Packs\atmel\SAM3X_DFP\1.0.50\include/component/pmc.h:
+../Drivers/Inc/component/pmc.h:
 
-C:\Program\ Files\ (x86)\Atmel\Studio\7.0\Packs\atmel\SAM3X_DFP\1.0.50\include/component/pwm.h:
+../Drivers/Inc/component/pwm.h:
 
-C:\Program\ Files\ (x86)\Atmel\Studio\7.0\Packs\atmel\SAM3X_DFP\1.0.50\include/component/rstc.h:
+../Drivers/Inc/component/rstc.h:
 
-C:\Program\ Files\ (x86)\Atmel\Studio\7.0\Packs\atmel\SAM3X_DFP\1.0.50\include/component/rtc.h:
+../Drivers/Inc/component/rtc.h:
 
-C:\Program\ Files\ (x86)\Atmel\Studio\7.0\Packs\atmel\SAM3X_DFP\1.0.50\include/component/rtt.h:
+../Drivers/Inc/component/rtt.h:
 
-C:\Program\ Files\ (x86)\Atmel\Studio\7.0\Packs\atmel\SAM3X_DFP\1.0.50\include/component/smc.h:
+../Drivers/Inc/component/smc.h:
 
-C:\Program\ Files\ (x86)\Atmel\Studio\7.0\Packs\atmel\SAM3X_DFP\1.0.50\include/component/spi.h:
+../Drivers/Inc/component/spi.h:
 
-C:\Program\ Files\ (x86)\Atmel\Studio\7.0\Packs\atmel\SAM3X_DFP\1.0.50\include/component/ssc.h:
+../Drivers/Inc/component/ssc.h:
 
-C:\Program\ Files\ (x86)\Atmel\Studio\7.0\Packs\atmel\SAM3X_DFP\1.0.50\include/component/supc.h:
+../Drivers/Inc/component/supc.h:
 
-C:\Program\ Files\ (x86)\Atmel\Studio\7.0\Packs\atmel\SAM3X_DFP\1.0.50\include/component/tc.h:
+../Drivers/Inc/component/tc.h:
 
-C:\Program\ Files\ (x86)\Atmel\Studio\7.0\Packs\atmel\SAM3X_DFP\1.0.50\include/component/trng.h:
+../Drivers/Inc/component/trng.h:
 
-C:\Program\ Files\ (x86)\Atmel\Studio\7.0\Packs\atmel\SAM3X_DFP\1.0.50\include/component/twi.h:
+../Drivers/Inc/component/twi.h:
 
-C:\Program\ Files\ (x86)\Atmel\Studio\7.0\Packs\atmel\SAM3X_DFP\1.0.50\include/component/uart.h:
+../Drivers/Inc/component/uart.h:
 
-C:\Program\ Files\ (x86)\Atmel\Studio\7.0\Packs\atmel\SAM3X_DFP\1.0.50\include/component/uotghs.h:
+../Drivers/Inc/component/uotghs.h:
 
-C:\Program\ Files\ (x86)\Atmel\Studio\7.0\Packs\atmel\SAM3X_DFP\1.0.50\include/component/usart.h:
+../Drivers/Inc/component/usart.h:
 
-C:\Program\ Files\ (x86)\Atmel\Studio\7.0\Packs\atmel\SAM3X_DFP\1.0.50\include/component/wdt.h:
+../Drivers/Inc/component/wdt.h:
 
-C:\Program\ Files\ (x86)\Atmel\Studio\7.0\Packs\atmel\SAM3X_DFP\1.0.50\include/instance/hsmci.h:
+../Drivers/Inc/instance/hsmci.h:
 
-C:\Program\ Files\ (x86)\Atmel\Studio\7.0\Packs\atmel\SAM3X_DFP\1.0.50\include/instance/ssc.h:
+../Drivers/Inc/instance/ssc.h:
 
-C:\Program\ Files\ (x86)\Atmel\Studio\7.0\Packs\atmel\SAM3X_DFP\1.0.50\include/instance/spi0.h:
+../Drivers/Inc/instance/spi0.h:
 
-C:\Program\ Files\ (x86)\Atmel\Studio\7.0\Packs\atmel\SAM3X_DFP\1.0.50\include/instance/tc0.h:
+../Drivers/Inc/instance/tc0.h:
 
-C:\Program\ Files\ (x86)\Atmel\Studio\7.0\Packs\atmel\SAM3X_DFP\1.0.50\include/instance/tc1.h:
+../Drivers/Inc/instance/tc1.h:
 
-C:\Program\ Files\ (x86)\Atmel\Studio\7.0\Packs\atmel\SAM3X_DFP\1.0.50\include/instance/tc2.h:
+../Drivers/Inc/instance/tc2.h:
 
-C:\Program\ Files\ (x86)\Atmel\Studio\7.0\Packs\atmel\SAM3X_DFP\1.0.50\include/instance/twi0.h:
+../Drivers/Inc/instance/twi0.h:
 
-C:\Program\ Files\ (x86)\Atmel\Studio\7.0\Packs\atmel\SAM3X_DFP\1.0.50\include/instance/twi1.h:
+../Drivers/Inc/instance/twi1.h:
 
-C:\Program\ Files\ (x86)\Atmel\Studio\7.0\Packs\atmel\SAM3X_DFP\1.0.50\include/instance/pwm.h:
+../Drivers/Inc/instance/pwm.h:
 
-C:\Program\ Files\ (x86)\Atmel\Studio\7.0\Packs\atmel\SAM3X_DFP\1.0.50\include/instance/usart0.h:
+../Drivers/Inc/instance/usart0.h:
 
-C:\Program\ Files\ (x86)\Atmel\Studio\7.0\Packs\atmel\SAM3X_DFP\1.0.50\include/instance/usart1.h:
+../Drivers/Inc/instance/usart1.h:
 
-C:\Program\ Files\ (x86)\Atmel\Studio\7.0\Packs\atmel\SAM3X_DFP\1.0.50\include/instance/usart2.h:
+../Drivers/Inc/instance/usart2.h:
 
-C:\Program\ Files\ (x86)\Atmel\Studio\7.0\Packs\atmel\SAM3X_DFP\1.0.50\include/instance/usart3.h:
+../Drivers/Inc/instance/usart3.h:
 
-C:\Program\ Files\ (x86)\Atmel\Studio\7.0\Packs\atmel\SAM3X_DFP\1.0.50\include/instance/uotghs.h:
+../Drivers/Inc/instance/uotghs.h:
 
-C:\Program\ Files\ (x86)\Atmel\Studio\7.0\Packs\atmel\SAM3X_DFP\1.0.50\include/instance/emac.h:
+../Drivers/Inc/instance/emac.h:
 
-C:\Program\ Files\ (x86)\Atmel\Studio\7.0\Packs\atmel\SAM3X_DFP\1.0.50\include/instance/can0.h:
+../Drivers/Inc/instance/can0.h:
 
-C:\Program\ Files\ (x86)\Atmel\Studio\7.0\Packs\atmel\SAM3X_DFP\1.0.50\include/instance/can1.h:
+../Drivers/Inc/instance/can1.h:
 
-C:\Program\ Files\ (x86)\Atmel\Studio\7.0\Packs\atmel\SAM3X_DFP\1.0.50\include/instance/trng.h:
+../Drivers/Inc/instance/trng.h:
 
-C:\Program\ Files\ (x86)\Atmel\Studio\7.0\Packs\atmel\SAM3X_DFP\1.0.50\include/instance/adc.h:
+../Drivers/Inc/instance/adc.h:
 
-C:\Program\ Files\ (x86)\Atmel\Studio\7.0\Packs\atmel\SAM3X_DFP\1.0.50\include/instance/dmac.h:
+../Drivers/Inc/instance/dmac.h:
 
-C:\Program\ Files\ (x86)\Atmel\Studio\7.0\Packs\atmel\SAM3X_DFP\1.0.50\include/instance/dacc.h:
+../Drivers/Inc/instance/dacc.h:
 
-C:\Program\ Files\ (x86)\Atmel\Studio\7.0\Packs\atmel\SAM3X_DFP\1.0.50\include/instance/smc.h:
+../Drivers/Inc/instance/smc.h:
 
-C:\Program\ Files\ (x86)\Atmel\Studio\7.0\Packs\atmel\SAM3X_DFP\1.0.50\include/instance/matrix.h:
+../Drivers/Inc/instance/matrix.h:
 
-C:\Program\ Files\ (x86)\Atmel\Studio\7.0\Packs\atmel\SAM3X_DFP\1.0.50\include/instance/pmc.h:
+../Drivers/Inc/instance/pmc.h:
 
-C:\Program\ Files\ (x86)\Atmel\Studio\7.0\Packs\atmel\SAM3X_DFP\1.0.50\include/instance/uart.h:
+../Drivers/Inc/instance/uart.h:
 
-C:\Program\ Files\ (x86)\Atmel\Studio\7.0\Packs\atmel\SAM3X_DFP\1.0.50\include/instance/chipid.h:
+../Drivers/Inc/instance/chipid.h:
 
-C:\Program\ Files\ (x86)\Atmel\Studio\7.0\Packs\atmel\SAM3X_DFP\1.0.50\include/instance/efc0.h:
+../Drivers/Inc/instance/efc0.h:
 
-C:\Program\ Files\ (x86)\Atmel\Studio\7.0\Packs\atmel\SAM3X_DFP\1.0.50\include/instance/efc1.h:
+../Drivers/Inc/instance/efc1.h:
 
-C:\Program\ Files\ (x86)\Atmel\Studio\7.0\Packs\atmel\SAM3X_DFP\1.0.50\include/instance/pioa.h:
+../Drivers/Inc/instance/pioa.h:
 
-C:\Program\ Files\ (x86)\Atmel\Studio\7.0\Packs\atmel\SAM3X_DFP\1.0.50\include/instance/piob.h:
+../Drivers/Inc/instance/piob.h:
 
-C:\Program\ Files\ (x86)\Atmel\Studio\7.0\Packs\atmel\SAM3X_DFP\1.0.50\include/instance/pioc.h:
+../Drivers/Inc/instance/pioc.h:
 
-C:\Program\ Files\ (x86)\Atmel\Studio\7.0\Packs\atmel\SAM3X_DFP\1.0.50\include/instance/piod.h:
+../Drivers/Inc/instance/piod.h:
 
-C:\Program\ Files\ (x86)\Atmel\Studio\7.0\Packs\atmel\SAM3X_DFP\1.0.50\include/instance/rstc.h:
+../Drivers/Inc/instance/rstc.h:
 
-C:\Program\ Files\ (x86)\Atmel\Studio\7.0\Packs\atmel\SAM3X_DFP\1.0.50\include/instance/supc.h:
+../Drivers/Inc/instance/supc.h:
 
-C:\Program\ Files\ (x86)\Atmel\Studio\7.0\Packs\atmel\SAM3X_DFP\1.0.50\include/instance/rtt.h:
+../Drivers/Inc/instance/rtt.h:
 
-C:\Program\ Files\ (x86)\Atmel\Studio\7.0\Packs\atmel\SAM3X_DFP\1.0.50\include/instance/wdt.h:
+../Drivers/Inc/instance/wdt.h:
 
-C:\Program\ Files\ (x86)\Atmel\Studio\7.0\Packs\atmel\SAM3X_DFP\1.0.50\include/instance/rtc.h:
+../Drivers/Inc/instance/rtc.h:
 
-C:\Program\ Files\ (x86)\Atmel\Studio\7.0\Packs\atmel\SAM3X_DFP\1.0.50\include/instance/gpbr.h:
+../Drivers/Inc/instance/gpbr.h:
 
-C:\Program\ Files\ (x86)\Atmel\Studio\7.0\Packs\atmel\SAM3X_DFP\1.0.50\include/pio/sam3x8e.h:
+../Drivers/Inc/pio/sam3x8e.h:
